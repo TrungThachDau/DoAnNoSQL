@@ -13,7 +13,7 @@ namespace QLBaoHanh
     {
         private static string CollectionName = "tk";
         MongoDBHelper mongoDBHelper = new MongoDBHelper();
-        public bool KiemTraDangNhap(string username, string password)
+        public int KiemTraDangNhap(string username, string password)
         {
          
             var result = MongoDBHelper.GetInstance().GetAllDocuments<TaiKhoan>(CollectionName);
@@ -21,10 +21,17 @@ namespace QLBaoHanh
             {
                 if (item.Username == username && item.Password == password)
                 {
-                    return true;
+                    if (item.Quyen == 1)
+                    {
+                        return 1;
+                    }
+                    else
+                    {
+                        return 2;
+                    }
                 }
             }
-            return false;
+            return 0;
         }
     }
 }

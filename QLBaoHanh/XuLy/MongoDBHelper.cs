@@ -15,7 +15,7 @@ namespace QLBaoHanh.XuLy
         private static MongoDBHelper mongoHelper;
         private static IMongoDatabase db;
         private static string url = "mongodb://localhost:27017";
-        private static string dbName = "BaoHanh";
+        private static string dbName = "QL_BaoHanh";
         public MongoDBHelper()
         {
             var client = new MongoClient(url);

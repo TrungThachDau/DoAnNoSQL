@@ -15,30 +15,50 @@ namespace QLBaoHanh
         public FormDangNhap()
         {
             InitializeComponent();
+            ;
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-            if(string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                 return;
             }
             XuLyDangNhap xuLyDangNhap = new XuLyDangNhap();
             
-            if(xuLyDangNhap.KiemTraDangNhap(username, password))
+            if(xuLyDangNhap.KiemTraDangNhap(username, password)==1)
             {
                 MessageBox.Show("Đăng nhập thành công");
-                FormMain formMain = new FormMain();
-                formMain.Show();
-                this.Hide();
+                FormTrangChu f = new FormTrangChu();                f.Show();
+            }
+            else if(xuLyDangNhap.KiemTraDangNhap(username, password) == 2)
+            {
+                MessageBox.Show("Đăng nhập thành công");
+                FormTrangChu f = new FormTrangChu();
+                f.Show();
             }
             else
             {
                 MessageBox.Show("Đăng nhập thất bại");
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

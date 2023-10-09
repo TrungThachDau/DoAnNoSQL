@@ -104,5 +104,20 @@ namespace QLBaoHanh
                 NgayKichHoatBaoHanh = ngayKichHoat
             });
         }
+
+        private void btn_Huy_Click(object sender, EventArgs e)
+        {
+            txtGia.Text = "";
+            txtImei.Text = "";
+            txtMaSp.Text = "";
+            txtNSX.Text = "";
+            txtTenSp.Text = "";
+            txtTSKT.Text = "";
+        }
+
+        private void btn_Thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
