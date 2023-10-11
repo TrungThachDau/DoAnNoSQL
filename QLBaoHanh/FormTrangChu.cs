@@ -49,5 +49,12 @@ namespace QLBaoHanh
             f.MdiParent = this;
             f.Show();
         }
+
+        private void tàiKToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTaiKhoan f = new FormTaiKhoan();
+            f.MdiParent = this;
+            f.Show();
+        }
     }
 }

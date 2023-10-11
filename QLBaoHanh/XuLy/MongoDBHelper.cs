@@ -15,7 +15,7 @@ namespace QLBaoHanh.XuLy
         private static MongoDBHelper mongoHelper;
         private static IMongoDatabase db;
         private static string url = "mongodb://localhost:27017";
-        private static string dbName = "QL_BaoHanh";
+        private static string dbName = "BaoHanh";
         public MongoDBHelper()
         {
             var client = new MongoClient(url);
@@ -71,6 +71,19 @@ namespace QLBaoHanh.XuLy
             foreach (var item in list)
             {
                 dt.Rows.Add(item.MaSP, item.TenSP, item.Gia, item.ImeiSP, item.ThongSoKyThuat, item.NhaSanXuat, item.NgayKichHoatBaoHanh);
+            }
+            return dt;
+        }
+        public DataTable DocTaiKhoan()
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Taikhoan");
+            dt.Columns.Add("Hoten");
+            dt.Columns.Add("Quyen");
+            var list = GetAllDocuments<TaiKhoan>("tk");
+            foreach (var item in list)
+            {
+                dt.Rows.Add(item.Username, item.TenNV, item.Quyen);
             }
             return dt;
         }
