@@ -12,12 +12,11 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\android\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\android\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "C:\\Users\\Luu Thang\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Luu Thang\\.nuget\\packages",
+      "D:\\vs2022\\3\\NuGetPackages"
     ],
     "configProperties": {
-      "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
     }
   }
