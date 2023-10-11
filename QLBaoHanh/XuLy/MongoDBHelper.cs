@@ -88,6 +88,21 @@ namespace QLBaoHanh.XuLy
             }
             return dt;
         }
+        public DataTable DocKhachHang()
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Tenkhachhang");
+            dt.Columns.Add("Diachi");
+            dt.Columns.Add("Ngaysinh");
+            dt.Columns.Add("Phai");
+            dt.Columns.Add("SDT");
+            var list = GetAllDocuments<KhachHang>("kh");
+            foreach (var item in list)
+            {
+                dt.Rows.Add(item.TenKH, item.DiaChi, item.NgaySinh, item.Phai, item.DienThoai);
+            }
+            return dt;
+        }
         public ComboBox LoadDSSanPham(ComboBox cbb)
         {
             var list = GetAllDocuments<SanPham>("sanpham");
