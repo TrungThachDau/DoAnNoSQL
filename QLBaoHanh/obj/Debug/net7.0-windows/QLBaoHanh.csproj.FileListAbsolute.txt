@@ -40,3 +40,4 @@ D:\OneDrive\Tài liệu\GitHub\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\re
 D:\OneDrive\Tài liệu\GitHub\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.Form2.resources
 D:\OneDrive\Tài liệu\GitHub\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.FormTaiKhoan.resources
 D:\OneDrive\Tài liệu\GitHub\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.sourcelink.json
+D:\OneDrive\Tài liệu\GitHub\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.FormKhachHang.resources

@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using QLBaoHanh.Model;
@@ -86,6 +87,45 @@ namespace QLBaoHanh.XuLy
                 dt.Rows.Add(item.Username, item.TenNV, item.Quyen);
             }
             return dt;
+        }
+        public ComboBox LoadDSSanPham(ComboBox cbb)
+        {
+            var list = GetAllDocuments<SanPham>("sanpham");
+            foreach (var item in list)
+            {
+                cbb.Items.Add(new SanPham
+                {
+                    MaSP = item.MaSP,
+                    TenSP = item.TenSP,
+                    Gia = item.Gia,
+                    ImeiSP = item.ImeiSP,
+                    ThongSoKyThuat = item.ThongSoKyThuat,
+                    NhaSanXuat = item.NhaSanXuat,
+                    NgayKichHoatBaoHanh = item.NgayKichHoatBaoHanh
+                });
+            }
+            cbb.DisplayMember = "TenSP";
+            cbb.ValueMember = "MaSP";
+            return cbb;
+        }
+        public ComboBox LoadDSKhachHang(ComboBox cbb)
+        {
+            var list = GetAllDocuments<KhachHang>("kh");
+            foreach (var item in list)
+            {
+                cbb.Items.Add(new KhachHang
+                {
+                    TenKH = item.TenKH,
+                    DiaChi = item.DiaChi,
+                    DienThoai = item.DienThoai,
+                    NgaySinh = item.NgaySinh,
+                    Phai  = item.Phai
+                });
+
+            }
+            cbb.DisplayMember = "TenKH";
+            cbb.ValueMember = "TenKH";
+            return cbb;
         }
         public List<BsonDocument> GetAllDocuments<BsonDocument>(string collectionName)
         {
