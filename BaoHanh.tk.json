@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "6529eb908c28ca4f57c91daf"
+  },
+  "TaiKhoan": "admin",
+  "MatKhau": "123",
+  "HoTen": "Người quản trị 1",
+  "Quyen": 1
+},
+{
+  "_id": {
+    "$oid": "6529eba68c28ca4f57c91db0"
+  },
+  "TaiKhoan": "admin2",
+  "MatKhau": "123",
+  "HoTen": "Người quản trị 2",
+  "Quyen": 2
+}]

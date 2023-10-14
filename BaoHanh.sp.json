@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "6529eb738c28ca4f57c91dad"
+  },
+  "MaSp": "SP001",
+  "TenSanPham": "Điện thoại iPhone 14 Pro Max",
+  "ImeiSanPham": "355345678901234",
+  "ThongSoKyThuat": "Màn hình: 6.7 inch Super Retina XDR OLED Chip A16 Bionic Cam trước 3 camera sau 48MP, 12MP, 12MP Camera trước: 12MP Dung lượng pin: 4352mAh",
+  "Gia": 30000000,
+  "NgayKichHoatBH": "20-07-2023",
+  "NhaSanXuat": "Apple"
+}]

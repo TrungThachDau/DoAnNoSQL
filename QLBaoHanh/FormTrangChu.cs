@@ -24,7 +24,7 @@ namespace QLBaoHanh
 
         public void menuSanpham_Click(object sender, EventArgs e)
         {
-            FormSanPham f= new FormSanPham();
+            FormSanPham f = new FormSanPham();
             f.MdiParent = this;
             f.Show();
         }
@@ -38,7 +38,7 @@ namespace QLBaoHanh
 
         public void menuThongKe_Click(object sender, EventArgs e)
         {
-            FormThongKe f = new FormThongKe(); 
+            FormThongKe f = new FormThongKe();
             f.MdiParent = this;
             f.Show();
         }

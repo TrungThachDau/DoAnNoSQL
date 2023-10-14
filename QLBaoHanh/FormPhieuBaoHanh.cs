@@ -32,14 +32,19 @@ namespace QLBaoHanh
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            FormThemPhieu f= new FormThemPhieu();
+            FormThemPhieu f = new FormThemPhieu();
             f.Show();
-            this.Hide();
+
         }
 
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

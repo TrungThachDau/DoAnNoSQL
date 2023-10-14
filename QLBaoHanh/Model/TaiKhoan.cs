@@ -10,11 +10,11 @@ namespace QLBaoHanh.Model
     [BsonIgnoreExtraElements]
     public class TaiKhoan
     {
-        [BsonElement("Taikhoan")]
+        [BsonElement("TaiKhoan")]
         public string Username { get; set; }
-        [BsonElement("Matkhau")]
+        [BsonElement("MatKhau")]
         public string Password { get; set; }
-        [BsonElement("Hoten")]
+        [BsonElement("HoTen")]
         public string TenNV { get; set; }
         [BsonElement("Quyen")]
         public double Quyen { get; set; }

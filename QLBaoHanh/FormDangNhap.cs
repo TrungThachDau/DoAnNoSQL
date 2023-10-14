@@ -28,13 +28,13 @@ namespace QLBaoHanh
                 return;
             }
             XuLyDangNhap xuLyDangNhap = new XuLyDangNhap();
-            
-            if(xuLyDangNhap.KiemTraDangNhap(username, password)==1)
+
+            if (xuLyDangNhap.KiemTraDangNhap(username, password) == 1)
             {
                 MessageBox.Show("Đăng nhập thành công");
-                FormTrangChu f = new FormTrangChu();                f.Show();
+                FormTrangChu f = new FormTrangChu(); f.Show();
             }
-            else if(xuLyDangNhap.KiemTraDangNhap(username, password) == 2)
+            else if (xuLyDangNhap.KiemTraDangNhap(username, password) == 2)
             {
                 MessageBox.Show("Đăng nhập thành công");
                 FormTrangChu f = new FormTrangChu();

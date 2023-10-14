@@ -12,13 +12,13 @@ namespace QLBaoHanh.Model
     {
         [BsonElement("TenKhachHang")]
         public string TenKH { get; set; }
-        [BsonElement("Diachi")]
+        [BsonElement("DiaChi")]
         public string DiaChi { get; set; }
         [BsonElement("SDT")]
         public string DienThoai { get; set; }
-        [BsonElement("Ngaysinh")]
+        [BsonElement("NgaySinh")]
         public string NgaySinh { get; set; }
-        [BsonElement("Phai")]
+        [BsonElement("GioiTinh")]
         public string Phai { get; set; }
     }
 }

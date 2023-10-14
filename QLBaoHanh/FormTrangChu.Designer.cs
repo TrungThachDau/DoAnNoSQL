@@ -28,82 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.menuBaoHanh = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuSanpham = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuKhachHang = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuThongKe = new System.Windows.Forms.ToolStripMenuItem();
-            this.tàiKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
-            this.SuspendLayout();
+            menuStrip1 = new System.Windows.Forms.MenuStrip();
+            menuBaoHanh = new System.Windows.Forms.ToolStripMenuItem();
+            menuSanpham = new System.Windows.Forms.ToolStripMenuItem();
+            menuKhachHang = new System.Windows.Forms.ToolStripMenuItem();
+            menuThongKe = new System.Windows.Forms.ToolStripMenuItem();
+            tàiKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(22, 22);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuBaoHanh,
-            this.menuSanpham,
-            this.menuKhachHang,
-            this.menuThongKe,
-            this.tàiKToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1255, 31);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
+            menuStrip1.ImageScalingSize = new System.Drawing.Size(22, 22);
+            menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { menuBaoHanh, menuSanpham, menuKhachHang, menuThongKe, tàiKToolStripMenuItem });
+            menuStrip1.Location = new System.Drawing.Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
+            menuStrip1.Size = new System.Drawing.Size(1412, 33);
+            menuStrip1.TabIndex = 2;
+            menuStrip1.Text = "menuStrip1";
             // 
             // menuBaoHanh
             // 
-            this.menuBaoHanh.Name = "menuBaoHanh";
-            this.menuBaoHanh.Size = new System.Drawing.Size(99, 27);
-            this.menuBaoHanh.Text = "Bảo hành";
-            this.menuBaoHanh.Click += new System.EventHandler(this.menuBaoHanh_Click);
+            menuBaoHanh.Name = "menuBaoHanh";
+            menuBaoHanh.Size = new System.Drawing.Size(99, 27);
+            menuBaoHanh.Text = "Bảo hành";
+            menuBaoHanh.Click += menuBaoHanh_Click;
             // 
             // menuSanpham
             // 
-            this.menuSanpham.Name = "menuSanpham";
-            this.menuSanpham.Size = new System.Drawing.Size(103, 27);
-            this.menuSanpham.Text = "Sản phẩm";
-            this.menuSanpham.Click += new System.EventHandler(this.menuSanpham_Click);
+            menuSanpham.Name = "menuSanpham";
+            menuSanpham.Size = new System.Drawing.Size(103, 27);
+            menuSanpham.Text = "Sản phẩm";
+            menuSanpham.Click += menuSanpham_Click;
             // 
             // menuKhachHang
             // 
-            this.menuKhachHang.Name = "menuKhachHang";
-            this.menuKhachHang.Size = new System.Drawing.Size(117, 27);
-            this.menuKhachHang.Text = "Khách hàng";
-            this.menuKhachHang.Click += new System.EventHandler(this.menuKhachHang_Click);
+            menuKhachHang.Name = "menuKhachHang";
+            menuKhachHang.Size = new System.Drawing.Size(117, 27);
+            menuKhachHang.Text = "Khách hàng";
+            menuKhachHang.Click += menuKhachHang_Click;
             // 
             // menuThongKe
             // 
-            this.menuThongKe.Name = "menuThongKe";
-            this.menuThongKe.Size = new System.Drawing.Size(97, 27);
-            this.menuThongKe.Text = "Thống kê";
-            this.menuThongKe.Click += new System.EventHandler(this.menuThongKe_Click);
+            menuThongKe.Name = "menuThongKe";
+            menuThongKe.Size = new System.Drawing.Size(97, 27);
+            menuThongKe.Text = "Thống kê";
+            menuThongKe.Click += menuThongKe_Click;
             // 
             // tàiKToolStripMenuItem
             // 
-            this.tàiKToolStripMenuItem.Name = "tàiKToolStripMenuItem";
-            this.tàiKToolStripMenuItem.Size = new System.Drawing.Size(98, 27);
-            this.tàiKToolStripMenuItem.Text = "Tài khoản";
-            this.tàiKToolStripMenuItem.Click += new System.EventHandler(this.tàiKToolStripMenuItem_Click);
+            tàiKToolStripMenuItem.Name = "tàiKToolStripMenuItem";
+            tàiKToolStripMenuItem.Size = new System.Drawing.Size(98, 27);
+            tàiKToolStripMenuItem.Text = "Tài khoản";
+            tàiKToolStripMenuItem.Click += tàiKToolStripMenuItem_Click;
             // 
             // FormTrangChu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1255, 667);
-            this.Controls.Add(this.menuStrip1);
-            this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "FormTrangChu";
-            this.Text = "FormTrangChu";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(1412, 959);
+            Controls.Add(menuStrip1);
+            IsMdiContainer = true;
+            Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            Name = "FormTrangChu";
+            ShowIcon = false;
+            Text = "Trang chủ";
+            WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

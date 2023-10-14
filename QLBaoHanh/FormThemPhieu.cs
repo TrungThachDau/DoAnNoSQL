@@ -38,7 +38,7 @@ namespace QLBaoHanh
         {
             int maPhieu = int.Parse(DateTime.Now.ToString("ddmmyy"));
             string moTaLoi = txtMoTaLoi.Text;
-            string NgayYeuCau = dtpNgayYeuCau.Text;
+            string NgayYeuCau = DateTime.Now.ToString(format: "dd-MM-yyyy");
             XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
             SanPham sanPham = cbbSanPham.SelectedItem as SanPham;
             string maSP = sanPham.MaSP;
@@ -80,7 +80,7 @@ namespace QLBaoHanh
                 },
                 MoTaLoi = moTaLoi,
                 TinhTrangXuLy = "Chưa xử lý",
-                NgayCapNhat = DateTime.Now.ToString("dd/MM/yyyy")
+                NgayCapNhat = DateTime.Now.ToString(format: "dd-MM-yyyy")
             });
             MessageBox.Show("Thêm thành công");
 

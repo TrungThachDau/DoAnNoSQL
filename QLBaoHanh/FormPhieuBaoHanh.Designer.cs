@@ -28,153 +28,196 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.NgayYeuCauBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_search = new System.Windows.Forms.TextBox();
-            this.btn_Thoat = new System.Windows.Forms.Button();
-            this.btn_Huy = new System.Windows.Forms.Button();
-            this.btn_sua = new System.Windows.Forms.Button();
-            this.btn_them = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            dataGridView1 = new System.Windows.Forms.DataGridView();
+            Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            NgayYeuCauBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            txt_search = new System.Windows.Forms.TextBox();
+            btn_Thoat = new System.Windows.Forms.Button();
+            btn_Huy = new System.Windows.Forms.Button();
+            btn_sua = new System.Windows.Forms.Button();
+            btn_them = new System.Windows.Forms.Button();
+            btnLoad = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NgayYeuCauBH,
-            this.Column1,
-            this.Column2});
-            this.dataGridView1.Location = new System.Drawing.Point(193, 158);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 57;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(650, 299);
-            this.dataGridView1.TabIndex = 0;
+            dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { Column3, NgayYeuCauBH, Column1, Column2, Column4, Column5, Column6 });
+            dataGridView1.Location = new System.Drawing.Point(30, 183);
+            dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 57;
+            dataGridView1.RowTemplate.Height = 24;
+            dataGridView1.Size = new System.Drawing.Size(1014, 345);
+            dataGridView1.TabIndex = 0;
+            // 
+            // Column3
+            // 
+            Column3.DataPropertyName = "Ma";
+            Column3.HeaderText = "Mã";
+            Column3.Name = "Column3";
+            Column3.Width = 150;
             // 
             // NgayYeuCauBH
             // 
-            this.NgayYeuCauBH.DataPropertyName = "NgayYeuCauBH";
-            this.NgayYeuCauBH.HeaderText = "Ngày yêu cầu";
-            this.NgayYeuCauBH.MinimumWidth = 7;
-            this.NgayYeuCauBH.Name = "NgayYeuCauBH";
-            this.NgayYeuCauBH.Width = 140;
+            NgayYeuCauBH.DataPropertyName = "NgayYeuCauBH";
+            NgayYeuCauBH.HeaderText = "Ngày yêu cầu";
+            NgayYeuCauBH.MinimumWidth = 7;
+            NgayYeuCauBH.Name = "NgayYeuCauBH";
+            NgayYeuCauBH.Width = 140;
             // 
             // Column1
             // 
-            this.Column1.DataPropertyName = "TenKhachHang";
-            this.Column1.HeaderText = "Khách hàng";
-            this.Column1.MinimumWidth = 7;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 160;
+            Column1.DataPropertyName = "TenKhachHang";
+            Column1.HeaderText = "Khách hàng";
+            Column1.MinimumWidth = 7;
+            Column1.Name = "Column1";
+            Column1.Width = 160;
             // 
             // Column2
             // 
-            this.Column2.DataPropertyName = "SanPham";
-            this.Column2.HeaderText = "Sản phẩm";
-            this.Column2.MinimumWidth = 7;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 140;
+            Column2.DataPropertyName = "SanPham";
+            Column2.HeaderText = "Sản phẩm";
+            Column2.MinimumWidth = 7;
+            Column2.Name = "Column2";
+            Column2.Width = 180;
+            // 
+            // Column4
+            // 
+            Column4.DataPropertyName = "MoTaLoi";
+            Column4.HeaderText = "Mô tả lỗi";
+            Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            Column5.DataPropertyName = "TinhTrangXuLy";
+            Column5.HeaderText = "Tình trạng";
+            Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            Column6.DataPropertyName = "NgayCapNhat";
+            Column6.HeaderText = "Ngày cập nhật";
+            Column6.Name = "Column6";
+            Column6.Width = 120;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(316, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(380, 37);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "BẢO HÀNH SẢN PHẨM";
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(369, 44);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(380, 37);
+            label1.TabIndex = 1;
+            label1.Text = "BẢO HÀNH SẢN PHẨM";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(265, 106);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Tìm kiếm";
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label2.Location = new System.Drawing.Point(309, 122);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(71, 20);
+            label2.TabIndex = 2;
+            label2.Text = "Tìm kiếm";
             // 
             // txt_search
             // 
-            this.txt_search.Location = new System.Drawing.Point(381, 106);
-            this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(260, 20);
-            this.txt_search.TabIndex = 3;
+            txt_search.Location = new System.Drawing.Point(444, 122);
+            txt_search.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txt_search.Name = "txt_search";
+            txt_search.Size = new System.Drawing.Size(303, 23);
+            txt_search.TabIndex = 3;
             // 
             // btn_Thoat
             // 
-            this.btn_Thoat.Location = new System.Drawing.Point(404, 497);
-            this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(91, 33);
-            this.btn_Thoat.TabIndex = 4;
-            this.btn_Thoat.Text = "Thoát";
-            this.btn_Thoat.UseVisualStyleBackColor = true;
-            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
+            btn_Thoat.Location = new System.Drawing.Point(471, 573);
+            btn_Thoat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btn_Thoat.Name = "btn_Thoat";
+            btn_Thoat.Size = new System.Drawing.Size(106, 38);
+            btn_Thoat.TabIndex = 4;
+            btn_Thoat.Text = "Thoát";
+            btn_Thoat.UseVisualStyleBackColor = true;
+            btn_Thoat.Click += btn_Thoat_Click;
             // 
             // btn_Huy
             // 
-            this.btn_Huy.Location = new System.Drawing.Point(281, 497);
-            this.btn_Huy.Name = "btn_Huy";
-            this.btn_Huy.Size = new System.Drawing.Size(91, 33);
-            this.btn_Huy.TabIndex = 5;
-            this.btn_Huy.Text = "Hủy";
-            this.btn_Huy.UseVisualStyleBackColor = true;
+            btn_Huy.Location = new System.Drawing.Point(328, 573);
+            btn_Huy.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btn_Huy.Name = "btn_Huy";
+            btn_Huy.Size = new System.Drawing.Size(106, 38);
+            btn_Huy.TabIndex = 5;
+            btn_Huy.Text = "Hủy";
+            btn_Huy.UseVisualStyleBackColor = true;
             // 
             // btn_sua
             // 
-            this.btn_sua.Location = new System.Drawing.Point(527, 497);
-            this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(91, 33);
-            this.btn_sua.TabIndex = 6;
-            this.btn_sua.Text = "Sửa phiếu";
-            this.btn_sua.UseVisualStyleBackColor = true;
+            btn_sua.Location = new System.Drawing.Point(615, 573);
+            btn_sua.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btn_sua.Name = "btn_sua";
+            btn_sua.Size = new System.Drawing.Size(106, 38);
+            btn_sua.TabIndex = 6;
+            btn_sua.Text = "Sửa phiếu";
+            btn_sua.UseVisualStyleBackColor = true;
             // 
             // btn_them
             // 
-            this.btn_them.Location = new System.Drawing.Point(654, 497);
-            this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(91, 33);
-            this.btn_them.TabIndex = 7;
-            this.btn_them.Text = "Thêm phiếu";
-            this.btn_them.UseVisualStyleBackColor = true;
-            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
+            btn_them.Location = new System.Drawing.Point(763, 573);
+            btn_them.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btn_them.Name = "btn_them";
+            btn_them.Size = new System.Drawing.Size(106, 38);
+            btn_them.TabIndex = 7;
+            btn_them.Text = "Thêm phiếu";
+            btn_them.UseVisualStyleBackColor = true;
+            btn_them.Click += btn_them_Click;
+            // 
+            // btnLoad
+            // 
+            btnLoad.Location = new System.Drawing.Point(192, 572);
+            btnLoad.Name = "btnLoad";
+            btnLoad.Size = new System.Drawing.Size(99, 39);
+            btnLoad.TabIndex = 8;
+            btnLoad.Text = "Làm mới";
+            btnLoad.UseVisualStyleBackColor = true;
+            btnLoad.Click += btnLoad_Click;
             // 
             // FormPhieuBaoHanh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1197, 718);
-            this.Controls.Add(this.btn_them);
-            this.Controls.Add(this.btn_sua);
-            this.Controls.Add(this.btn_Huy);
-            this.Controls.Add(this.btn_Thoat);
-            this.Controls.Add(this.txt_search);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "FormPhieuBaoHanh";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(1396, 828);
+            Controls.Add(btnLoad);
+            Controls.Add(btn_them);
+            Controls.Add(btn_sua);
+            Controls.Add(btn_Huy);
+            Controls.Add(btn_Thoat);
+            Controls.Add(txt_search);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(dataGridView1);
+            Margin = new System.Windows.Forms.Padding(2);
+            Name = "FormPhieuBaoHanh";
+            ShowIcon = false;
+            Text = "Bảo hành";
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayYeuCauBH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_search;
@@ -182,6 +225,14 @@
         private System.Windows.Forms.Button btn_Huy;
         private System.Windows.Forms.Button btn_sua;
         private System.Windows.Forms.Button btn_them;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayYeuCauBH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Button btnLoad;
     }
 }
 

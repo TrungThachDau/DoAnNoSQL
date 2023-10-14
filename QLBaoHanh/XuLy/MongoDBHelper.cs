@@ -16,7 +16,7 @@ namespace QLBaoHanh.XuLy
         private static MongoDBHelper mongoHelper;
         private static IMongoDatabase db;
         private static string url = "mongodb://localhost:27017";
-        private static string dbName = "QL_Baohanhsanpham";
+        private static string dbName = "BaoHanh";
         public MongoDBHelper()
         {
             var client = new MongoClient(url);
@@ -46,15 +46,19 @@ namespace QLBaoHanh.XuLy
         {
             DataTable dt = new DataTable();
             // Tạo các cột cho DataTable
-             // Đặt kiểu dữ liệu cho cột
+            // Đặt kiểu dữ liệu cho cột
+            dt.Columns.Add("Ma");
             dt.Columns.Add("NgayYeuCauBH");
             dt.Columns.Add("TenKhachHang");
             dt.Columns.Add("SanPham");
+            dt.Columns.Add("MoTaLoi");
+            dt.Columns.Add("TinhTrangXuLy");
+            dt.Columns.Add("NgayCapNhat");
             var list = GetAllDocuments<PhieuBaoHanh>("bh");           
             foreach (var item in list)
             {
                 // Thêm dòng dữ liệu vào DataTable
-                dt.Rows.Add(item.NgayYCBaoHanh, item.KhachHang.TenKH, item.SanPham.TenSP);               
+                dt.Rows.Add(item.Id,item.NgayYCBaoHanh, item.KhachHang.TenKH, item.SanPham.TenSP, item.MoTaLoi, item.TinhTrangXuLy, item.NgayCapNhat);               
             }
             return dt;
         }
@@ -68,7 +72,7 @@ namespace QLBaoHanh.XuLy
             dt.Columns.Add("Thongsokythuat");
             dt.Columns.Add("Nhasanxuat");
             dt.Columns.Add("Ngaykichhoatbaohanh");
-            var list =  GetAllDocuments<SanPham>("sanpham");
+            var list =  GetAllDocuments<SanPham>("sp");
             foreach (var item in list)
             {
                 dt.Rows.Add(item.MaSP, item.TenSP, item.Gia, item.ImeiSP, item.ThongSoKyThuat, item.NhaSanXuat, item.NgayKichHoatBaoHanh);
@@ -78,8 +82,8 @@ namespace QLBaoHanh.XuLy
         public DataTable DocTaiKhoan()
         {
             DataTable dt = new DataTable();
-            dt.Columns.Add("Taikhoan");
-            dt.Columns.Add("Hoten");
+            dt.Columns.Add("TaiKhoan");
+            dt.Columns.Add("HoTen");
             dt.Columns.Add("Quyen");
             var list = GetAllDocuments<TaiKhoan>("tk");
             foreach (var item in list)
@@ -87,6 +91,25 @@ namespace QLBaoHanh.XuLy
                 dt.Rows.Add(item.Username, item.TenNV, item.Quyen);
             }
             return dt;
+        }
+        public ComboBox LoadComboBoxQuyenTK(ComboBox cbb)
+        {
+            var list = GetAllDocuments<TaiKhoan>("tk");
+            foreach (var item in list)
+            {
+                cbb.Items.Add(new TaiKhoan
+                {
+                    
+                    Quyen = item.Quyen
+                });
+            }
+            cbb.ValueMember= "Quyen";
+            cbb.DisplayMember = "Quyen"; // Hiển thị giá trị "Quyen"
+             // Chọn "Quyen" làm giá trị cho mỗi mục
+
+            // Đặt giá trị mặc định cho ComboBox dựa trên giá trị "Quyen" của mục đầu tiên
+          
+            return cbb;
         }
         public DataTable DocKhachHang()
         {
@@ -105,7 +128,7 @@ namespace QLBaoHanh.XuLy
         }
         public ComboBox LoadDSSanPham(ComboBox cbb)
         {
-            var list = GetAllDocuments<SanPham>("sanpham");
+            var list = GetAllDocuments<SanPham>("sp");
             foreach (var item in list)
             {
                 cbb.Items.Add(new SanPham

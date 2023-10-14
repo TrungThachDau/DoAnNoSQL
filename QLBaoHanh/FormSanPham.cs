@@ -35,7 +35,7 @@ namespace QLBaoHanh
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex>=0&&e.RowIndex<dataGridView1.Rows.Count)
+            if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
                 txtMaSp.Text = row.Cells[0].Value.ToString();
@@ -44,7 +44,7 @@ namespace QLBaoHanh
                 txtImei.Text = row.Cells[3].Value.ToString();
                 txtTSKT.Text = row.Cells[4].Value.ToString();
                 txtNSX.Text = row.Cells[5].Value.ToString();
-               // dtpNgayKichHoat.Text = row.Cells[6].Value.ToString();
+                dtpNgayKichHoat.Text = row.Cells[6].Value.ToString();
 
 
             }
@@ -71,7 +71,7 @@ namespace QLBaoHanh
                 NhaSanXuat = nsx,
                 NgayKichHoatBaoHanh = ngayKichHoat
             });
-            
+
             LoadSanPham();
         }
 
@@ -90,7 +90,7 @@ namespace QLBaoHanh
             int gia = int.Parse(txtGia.Text);
             string imei = txtImei.Text;
             string tskt = txtTSKT.Text;
-                string nsx = txtNSX.Text;
+            string nsx = txtNSX.Text;
             string ngayKichHoat = dtpNgayKichHoat.Text;
             XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
             mongoDBHelper.UpdateOneDocument<SanPham>("sanpham", "Masp", maSP, new SanPham

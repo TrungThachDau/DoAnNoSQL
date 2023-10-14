@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "6529fde10a78b52b333fb408"
+  },
+  "NgayYeuCauBH": "14-10-2023",
+  "KhachHang": {
+    "TenKhachHang": "Nguyễn Thanh Tùng",
+    "DiaChi": "Sài Gòn",
+    "SDT": "0912345678",
+    "NgaySinh": "01-01-2000",
+    "GioiTinh": "Nam"
+  },
+  "SamPham": {
+    "MaSp": "SP002",
+    "TenSanPham": "Điện thoại iPhone 14 Pro Max",
+    "ImeiSanPham": "355345678901234",
+    "ThongSoKyThuat": "Màn hình: 6.7 inch Super Retina XDR OLED Chip A16 Bionic Cam trước 3 camera sau 48MP, 12MP, 12MP Camera trước: 12MP Dung lượng pin: 4352mAh",
+    "Gia": 30000000,
+    "NgayKichHoatBH": "20-07-2023",
+    "NhaSanXuat": "Apple"
+  },
+  "MoTaLoi": "sdsadads",
+  "TinhTrangXuLy": "Chưa xử lý",
+  "NgayCapNhat": "14-10-2023"
+}]

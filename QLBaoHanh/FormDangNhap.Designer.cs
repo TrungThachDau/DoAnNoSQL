@@ -29,123 +29,124 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDangNhap));
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnDangNhap = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btn_Cancel = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            txtUsername = new System.Windows.Forms.TextBox();
+            label1 = new System.Windows.Forms.Label();
+            txtPassword = new System.Windows.Forms.TextBox();
+            btnDangNhap = new System.Windows.Forms.Button();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            label2 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            btn_Cancel = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(643, 170);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(191, 20);
-            this.txtUsername.TabIndex = 0;
+            txtUsername.Location = new System.Drawing.Point(750, 196);
+            txtUsername.Margin = new System.Windows.Forms.Padding(2);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new System.Drawing.Size(222, 23);
+            txtUsername.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(484, 165);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Tên người dùng";
+            label1.AutoSize = true;
+            label1.BackColor = System.Drawing.Color.White;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(565, 190);
+            label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(146, 24);
+            label1.TabIndex = 1;
+            label1.Text = "Tên người dùng";
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(643, 231);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(191, 20);
-            this.txtPassword.TabIndex = 2;
+            txtPassword.Location = new System.Drawing.Point(750, 267);
+            txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.Size = new System.Drawing.Size(222, 23);
+            txtPassword.TabIndex = 2;
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(722, 299);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(107, 32);
-            this.btnDangNhap.TabIndex = 4;
-            this.btnDangNhap.Text = "Đăng nhập";
-            this.btnDangNhap.UseVisualStyleBackColor = true;
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            btnDangNhap.Location = new System.Drawing.Point(642, 357);
+            btnDangNhap.Margin = new System.Windows.Forms.Padding(2);
+            btnDangNhap.Name = "btnDangNhap";
+            btnDangNhap.Size = new System.Drawing.Size(125, 37);
+            btnDangNhap.TabIndex = 4;
+            btnDangNhap.Text = "Đăng nhập";
+            btnDangNhap.UseVisualStyleBackColor = true;
+            btnDangNhap.Click += btnDangNhap_Click;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-3, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(889, 462);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new System.Drawing.Point(-4, 0);
+            pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(1037, 533);
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(495, 231);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 24);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Mật khẩu";
+            label2.AutoSize = true;
+            label2.BackColor = System.Drawing.Color.White;
+            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label2.Location = new System.Drawing.Point(565, 267);
+            label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(86, 24);
+            label2.TabIndex = 6;
+            label2.Text = "Mật khẩu";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Bauhaus 93", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(605, 107);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 42);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "LOGIN";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            label3.AutoSize = true;
+            label3.BackColor = System.Drawing.Color.White;
+            label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label3.Location = new System.Drawing.Point(642, 96);
+            label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(240, 42);
+            label3.TabIndex = 7;
+            label3.Text = "ĐĂNG NHẬP";
+            label3.Click += label3_Click;
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.Location = new System.Drawing.Point(562, 299);
-            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(107, 32);
-            this.btn_Cancel.TabIndex = 8;
-            this.btn_Cancel.Text = "Hủy";
-            this.btn_Cancel.UseVisualStyleBackColor = true;
-            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
+            btn_Cancel.Location = new System.Drawing.Point(832, 357);
+            btn_Cancel.Margin = new System.Windows.Forms.Padding(2);
+            btn_Cancel.Name = "btn_Cancel";
+            btn_Cancel.Size = new System.Drawing.Size(125, 37);
+            btn_Cancel.TabIndex = 8;
+            btn_Cancel.Text = "Hủy";
+            btn_Cancel.UseVisualStyleBackColor = true;
+            btn_Cancel.Click += btn_Cancel_Click;
             // 
             // FormDangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 459);
-            this.Controls.Add(this.btn_Cancel);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnDangNhap);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FormDangNhap";
-            this.Text = "FormDangNhap";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(1031, 530);
+            Controls.Add(btn_Cancel);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(btnDangNhap);
+            Controls.Add(txtPassword);
+            Controls.Add(label1);
+            Controls.Add(txtUsername);
+            Controls.Add(pictureBox1);
+            Margin = new System.Windows.Forms.Padding(2);
+            Name = "FormDangNhap";
+            ShowIcon = false;
+            Text = "Đăng nhập";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

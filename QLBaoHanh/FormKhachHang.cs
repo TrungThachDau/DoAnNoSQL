@@ -22,7 +22,7 @@ namespace QLBaoHanh
         {
             txtTenKH.Clear();
             txtDiachi.Clear();
-            
+
             txtSDT.Clear();
             txtPhai.Clear();
             txtTenKH.Focus();
@@ -45,7 +45,7 @@ namespace QLBaoHanh
             string tenKH = txtTenKH.Text;
             string diaChi = txtDiachi.Text;
             string sdt = txtSDT.Text;
-            string ngsinh = dtpngsinh.Value.ToString("dd/MM/yyyy");
+            string ngsinh = dtpngsinh.Value.ToString(format: "dd-MM-yyyy");
             string phai = txtPhai.Text;
             XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
             mongoDBHelper.InsertDocument<KhachHang>("kh", new KhachHang
@@ -66,15 +66,7 @@ namespace QLBaoHanh
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
-            {
-                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                txtTenKH.Text = row.Cells[0].Value.ToString();
-                txtDiachi.Text = row.Cells[1].Value.ToString();
-                dtpngsinh.Text = row.Cells[2].Value.ToString();
-                txtPhai.Text = row.Cells[3].Value.ToString();
-                txtSDT.Text = row.Cells[4].Value.ToString();
-            }
+            
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -91,7 +83,7 @@ namespace QLBaoHanh
             string diaChi = txtDiachi.Text;
             string sdt = txtSDT.Text;
             string phai = txtPhai.Text;
-            string ngsinh = dtpngsinh.Value.ToString("dd-MM-yyyy");
+            string ngsinh = dtpngsinh.Value.ToString(format: "dd-MM-yyyy");
             XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
             mongoDBHelper.UpdateOneDocument<KhachHang>("kh", "TenKhachHang", tenKH, new KhachHang
             {
@@ -106,7 +98,15 @@ namespace QLBaoHanh
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                txtTenKH.Text = row.Cells[0].Value.ToString();
+                txtDiachi.Text = row.Cells[1].Value.ToString();
+                dtpngsinh.Text = row.Cells[2].Value.ToString();
+                txtPhai.Text = row.Cells[3].Value.ToString();
+                txtSDT.Text = row.Cells[4].Value.ToString();
+            }
         }
     }
 }

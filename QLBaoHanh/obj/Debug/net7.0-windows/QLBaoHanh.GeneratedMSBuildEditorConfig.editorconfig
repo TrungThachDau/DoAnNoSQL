@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = QLBaoHanh
-build_property.ProjectDir = D:\OneDrive\Tài liệu\GitHub\DoAnNoSQL\QLBaoHanh\
+build_property.ProjectDir = D:\GitHub\DoAnNoSQL\QLBaoHanh\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

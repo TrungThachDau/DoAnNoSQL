@@ -10,13 +10,13 @@ namespace QLBaoHanh.Model
     [BsonIgnoreExtraElements]
     public class SanPham
     {
-        [BsonElement("Masp")]
+        [BsonElement("MaSp")]
         public string MaSP { get; set; }
         [BsonElement("TenSanPham")]
         public string TenSP { get; set; }
-        [BsonElement("EmeiSanPham")]
+        [BsonElement("ImeiSanPham")]
         public string ImeiSP { get; set; }
-        [BsonElement("Thongsokythuat")]
+        [BsonElement("ThongSoKyThuat")]
         public string ThongSoKyThuat { get; set; }
         [BsonElement("Gia")]
         public double Gia { get; set; }
