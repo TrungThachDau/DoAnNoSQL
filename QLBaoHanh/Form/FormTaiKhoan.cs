@@ -25,7 +25,7 @@ namespace QLBaoHanh
         }
         private void LoadTaiKhoan()
         {
-            XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
+            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
             dgvTaiKhoan.DataSource = mongoDBHelper.DocTaiKhoan();
         }
 
@@ -52,7 +52,7 @@ namespace QLBaoHanh
         }
         private void LoadComboBoxQuyen()
         {
-            XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
+            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
             mongoDBHelper.LoadComboBoxQuyenTK(comboBox1);
 
         }
@@ -68,8 +68,8 @@ namespace QLBaoHanh
             string password = txtPassword.Text;
             string ten = txtTen.Text;
             double quyen = double.Parse(comboBox1.Text);
-            XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
-            mongoDBHelper.InsertDocument<TaiKhoan>("tk", new TaiKhoan
+            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
+            mongoDBHelper.InsertOneDocument<TaiKhoan>("tk", new TaiKhoan
             {
                 Username = username,
                 Password = password,
@@ -84,7 +84,7 @@ namespace QLBaoHanh
         {
 
             string username = txtUsername.Text;
-            XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
+            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
             mongoDBHelper.DeleteOneDocument<TaiKhoan>("tk", "TaiKhoan", username);
             LoadTaiKhoan();
             MessageBox.Show("Xóa thành công");
@@ -101,7 +101,7 @@ namespace QLBaoHanh
             string password = txtPassword.Text;
             string ten = txtTen.Text;
             double quyen = double.Parse(comboBox1.SelectedValue.ToString());
-            XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
+            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
             mongoDBHelper.UpdateOneDocument<TaiKhoan>("tk", "TaiKhoan", username, new TaiKhoan
             {
                 Username = username,

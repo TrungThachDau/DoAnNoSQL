@@ -24,7 +24,7 @@ namespace QLBaoHanh
         }
         public void LoadSanPham()
         {
-            XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
+            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
             dataGridView1.DataSource = mongoDBHelper.DocSanPham();
         }
 
@@ -60,8 +60,8 @@ namespace QLBaoHanh
             string tskt = txtTSKT.Text;
             string nsx = txtNSX.Text;
             string ngayKichHoat = dtpNgayKichHoat.Text;
-            XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
-            mongoDBHelper.InsertDocument<SanPham>("sanpham", new SanPham
+            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
+            mongoDBHelper.InsertOneDocument<SanPham>("sanpham", new SanPham
             {
                 MaSP = maSP,
                 TenSP = tenSP,
@@ -78,7 +78,7 @@ namespace QLBaoHanh
         private void btnXoa_Click(object sender, EventArgs e)
         {
             string maSP = txtMaSp.Text;
-            XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
+            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
             mongoDBHelper.DeleteOneDocument<SanPham>("sanpham", "Masp", maSP);
             LoadSanPham();
         }
@@ -92,7 +92,7 @@ namespace QLBaoHanh
             string tskt = txtTSKT.Text;
             string nsx = txtNSX.Text;
             string ngayKichHoat = dtpNgayKichHoat.Text;
-            XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
+            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
             mongoDBHelper.UpdateOneDocument<SanPham>("sanpham", "Masp", maSP, new SanPham
             {
                 MaSP = maSP,

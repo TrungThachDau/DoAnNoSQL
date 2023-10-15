@@ -22,5 +22,23 @@ namespace QLBaoHanh.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("mongodb://localhost:27017")]
+        public string url {
+            get {
+                return ((string)(this["url"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("BaoHanh")]
+        public string dbname {
+            get {
+                return ((string)(this["dbname"]));
+            }
+        }
     }
 }

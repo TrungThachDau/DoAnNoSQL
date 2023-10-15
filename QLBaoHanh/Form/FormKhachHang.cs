@@ -29,7 +29,7 @@ namespace QLBaoHanh
         }
         public void LoadKhachHang()
         {
-            XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
+            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
             dataGridView1.DataSource = mongoDBHelper.DocKhachHang();
         }
 
@@ -47,8 +47,8 @@ namespace QLBaoHanh
             string sdt = txtSDT.Text;
             string ngsinh = dtpngsinh.Value.ToString(format: "dd-MM-yyyy");
             string phai = txtPhai.Text;
-            XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
-            mongoDBHelper.InsertDocument<KhachHang>("kh", new KhachHang
+            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
+            mongoDBHelper.InsertOneDocument<KhachHang>("kh", new KhachHang
             {
                 TenKH = tenKH,
                 DiaChi = diaChi,
@@ -72,7 +72,7 @@ namespace QLBaoHanh
         private void btnXoa_Click(object sender, EventArgs e)
         {
             string tenkh = txtTenKH.Text;
-            XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
+            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
             mongoDBHelper.DeleteOneDocument<KhachHang>("kh", "TenKhachHang", tenkh);
             LoadKhachHang();
         }
@@ -84,7 +84,7 @@ namespace QLBaoHanh
             string sdt = txtSDT.Text;
             string phai = txtPhai.Text;
             string ngsinh = dtpngsinh.Value.ToString(format: "dd-MM-yyyy");
-            XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
+            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
             mongoDBHelper.UpdateOneDocument<KhachHang>("kh", "TenKhachHang", tenKH, new KhachHang
             {
                 TenKH = tenKH,

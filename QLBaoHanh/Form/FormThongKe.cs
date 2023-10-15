@@ -13,13 +13,13 @@ namespace QLBaoHanh
 {
     public partial class FormThongKe : Form
     {
-        private MongoDBHelper mongoDBHelper;
+        private XuLyTruyVan mongoDBHelper;
 
 
         public FormThongKe()
         {
             InitializeComponent();
-            mongoDBHelper = new MongoDBHelper();
+            mongoDBHelper = new XuLyTruyVan();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)

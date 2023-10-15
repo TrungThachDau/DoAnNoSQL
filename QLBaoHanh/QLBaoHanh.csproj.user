@@ -2,25 +2,25 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="FormDangNhap.cs">
+    <Compile Update="Form\FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormKhachHang.cs">
+    <Compile Update="Form\FormKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormPhieuBaoHanh.cs">
+    <Compile Update="Form\FormPhieuBaoHanh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormSanPham.cs">
+    <Compile Update="Form\FormSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormThemPhieu.cs">
+    <Compile Update="Form\FormThemPhieu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormThongKe.cs">
+    <Compile Update="Form\FormThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormTrangChu.cs">
+    <Compile Update="Form\FormTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

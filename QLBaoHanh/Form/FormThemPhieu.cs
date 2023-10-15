@@ -14,16 +14,10 @@ namespace QLBaoHanh
 {
     public partial class FormThemPhieu : Form
     {
-        public FormThemPhieu(PhieuBaoHanh data, bool isReadOnly, ObjectId id)
+        public FormThemPhieu()
         {
             InitializeComponent();
-            if (isReadOnly)
-            {
-                txtMoTaLoi.Text = data.MoTaLoi;
-                cbbKhachHang.Text = data.KhachHang.TenKH;
-                cbbSanPham.Text = data.SanPham.TenSP;
-                dtpNgayYeuCau.Text = data.NgayYCBaoHanh;
-            }
+            
         }
 
         private void FormThemPhieu_Load(object sender, EventArgs e)
@@ -33,13 +27,13 @@ namespace QLBaoHanh
         }
         public void LoadCbbSanPham()
         {
-            XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
+            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
             mongoDBHelper.LoadDSSanPham(cbbSanPham);
 
         }
         public void LoadCbbKhachHang()
         {
-            XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
+            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
             mongoDBHelper.LoadDSKhachHang(cbbKhachHang);
         }
         private void btnLuu_Click(object sender, EventArgs e)
@@ -47,7 +41,7 @@ namespace QLBaoHanh
             int maPhieu = int.Parse(DateTime.Now.ToString("ddmmyy"));
             string moTaLoi = txtMoTaLoi.Text;
             string NgayYeuCau = DateTime.Now.ToString(format: "dd-MM-yyyy");
-            XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
+            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
             SanPham sanPham = cbbSanPham.SelectedItem as SanPham;
             string maSP = sanPham.MaSP;
             string tenSP = sanPham.TenSP;
@@ -63,7 +57,7 @@ namespace QLBaoHanh
             string ngaySinh = kh.NgaySinh;
             string phai = kh.Phai;
 
-            mongoDBHelper.InsertDocument<PhieuBaoHanh>("bh", new PhieuBaoHanh
+            mongoDBHelper.InsertOneDocument<PhieuBaoHanh>("bh", new PhieuBaoHanh
             {
                 NgayYCBaoHanh = NgayYeuCau,
                 KhachHang = new KhachHang

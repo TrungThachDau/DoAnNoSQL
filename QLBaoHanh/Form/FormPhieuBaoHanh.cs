@@ -14,7 +14,7 @@ namespace QLBaoHanh
 {
     public partial class FormPhieuBaoHanh : Form
     {
-        private readonly List<PhieuBaoHanh> customerModels;
+        
         public FormPhieuBaoHanh()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace QLBaoHanh
         public void LoadData()
         {
 
-            XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
+            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
             dataGridView1.DataSource = mongoDBHelper.DocPhieuBaoHanh();
 
 
@@ -36,8 +36,8 @@ namespace QLBaoHanh
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            //FormThemPhieu f = new FormThemPhieu();
-            //f.Show();
+            FormThemPhieu f = new FormThemPhieu();
+            f.Show();
 
         }
 
@@ -53,18 +53,7 @@ namespace QLBaoHanh
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-
-                int index = dataGridView1.SelectedRows[0].Index;
-                var data = customerModels[index];
-                FormThemPhieu f = new FormThemPhieu(data, true, ObjectId.Empty);
-                f.Show();
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn dòng cần sửa");
-            }
+           
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -73,13 +62,13 @@ namespace QLBaoHanh
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
                 string id = row.Cells[0].Value.ToString();
-                // string id = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                
                 LoadPhieuBaoHanh(id);
             }
         }
         private void LoadPhieuBaoHanh(string id)
         {
-            XuLy.MongoDBHelper mongoDBHelper = new XuLy.MongoDBHelper();
+            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
             var document = mongoDBHelper.GetDocumentById<PhieuBaoHanh>("bh", id);
             txtMaBH.Text = document.Id.ToString();
             txtNgayYC.Text = document.NgayYCBaoHanh.ToString();
