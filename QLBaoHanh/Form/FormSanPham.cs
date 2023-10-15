@@ -61,7 +61,7 @@ namespace QLBaoHanh
             string nsx = txtNSX.Text;
             string ngayKichHoat = dtpNgayKichHoat.Text;
             XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
-            mongoDBHelper.InsertOneDocument<SanPham>("sanpham", new SanPham
+            mongoDBHelper.InsertOneDocument<SanPham>("sp", new SanPham
             {
                 MaSP = maSP,
                 TenSP = tenSP,
@@ -79,7 +79,7 @@ namespace QLBaoHanh
         {
             string maSP = txtMaSp.Text;
             XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
-            mongoDBHelper.DeleteOneDocument<SanPham>("sanpham", "Masp", maSP);
+            mongoDBHelper.DeleteOneDocument<SanPham>("sp", "Masp", maSP);
             LoadSanPham();
         }
 
@@ -93,7 +93,7 @@ namespace QLBaoHanh
             string nsx = txtNSX.Text;
             string ngayKichHoat = dtpNgayKichHoat.Text;
             XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
-            mongoDBHelper.UpdateOneDocument<SanPham>("sanpham", "Masp", maSP, new SanPham
+            mongoDBHelper.UpdateOneDocument<SanPham>("sp", "Masp", maSP, new SanPham
             {
                 MaSP = maSP,
                 TenSP = tenSP,
