@@ -1,4 +1,5 @@
-﻿using QLBaoHanh.Model;
+﻿using MongoDB.Bson;
+using QLBaoHanh.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,16 @@ namespace QLBaoHanh
 {
     public partial class FormThemPhieu : Form
     {
-        public FormThemPhieu()
+        public FormThemPhieu(PhieuBaoHanh data, bool isReadOnly, ObjectId id)
         {
             InitializeComponent();
+            if (isReadOnly)
+            {
+                txtMoTaLoi.Text = data.MoTaLoi;
+                cbbKhachHang.Text = data.KhachHang.TenKH;
+                cbbSanPham.Text = data.SanPham.TenSP;
+                dtpNgayYeuCau.Text = data.NgayYCBaoHanh;
+            }
         }
 
         private void FormThemPhieu_Load(object sender, EventArgs e)

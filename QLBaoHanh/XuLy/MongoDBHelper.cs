@@ -49,16 +49,14 @@ namespace QLBaoHanh.XuLy
             // Đặt kiểu dữ liệu cho cột
             dt.Columns.Add("Ma");
             dt.Columns.Add("NgayYeuCauBH");
-            dt.Columns.Add("TenKhachHang");
-            dt.Columns.Add("SanPham");
-            dt.Columns.Add("MoTaLoi");
+            dt.Columns.Add("TenKhachHang");            
             dt.Columns.Add("TinhTrangXuLy");
             dt.Columns.Add("NgayCapNhat");
             var list = GetAllDocuments<PhieuBaoHanh>("bh");           
             foreach (var item in list)
             {
                 // Thêm dòng dữ liệu vào DataTable
-                dt.Rows.Add(item.Id,item.NgayYCBaoHanh, item.KhachHang.TenKH, item.SanPham.TenSP, item.MoTaLoi, item.TinhTrangXuLy, item.NgayCapNhat);               
+                dt.Rows.Add(item.Id,item.NgayYCBaoHanh, item.KhachHang.TenKH, item.TinhTrangXuLy, item.NgayCapNhat);               
             }
             return dt;
         }
@@ -339,11 +337,17 @@ namespace QLBaoHanh.XuLy
             var collection = db.GetCollection<BsonDocument>(collectionName);
             return collection.Find(_ => true).ToList();
         }
-        public List<BsonDocument> GetDocument<BsonDocument>(string collectionName, string field, string value)
+        public BsonDocument GetDocumentById<BsonDocument>(string collectionName, string objectId)
+        {
+            var collection = db.GetCollection<BsonDocument>(collectionName);
+            var filter = Builders<BsonDocument>.Filter.Eq("_id", ObjectId.Parse(objectId));
+            return collection.Find(filter).FirstOrDefault();
+        }
+        public BsonDocument GetDocument<BsonDocument>(string collectionName, string field, string value)
         {
             var collection = db.GetCollection<BsonDocument>(collectionName);
             var filter = Builders<BsonDocument>.Filter.Eq(field, value);
-            return collection.Find(filter).ToList();
+            return collection.Find(filter).FirstOrDefault();
         }
         public void DeleteOneDocument<BsonDocument>(string collectionName, string field, string value)
         {
@@ -373,8 +377,6 @@ namespace QLBaoHanh.XuLy
             var filter = Builders<BsonDocument>.Filter.Eq(field, value);
             collection.ReplaceOne(filter, document);
         }
-        
-
 
         
     }
