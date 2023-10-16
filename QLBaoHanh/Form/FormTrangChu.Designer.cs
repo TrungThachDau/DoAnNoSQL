@@ -47,6 +47,7 @@
             menuStrip1.Size = new System.Drawing.Size(1412, 33);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
+            menuStrip1.ItemClicked += menuStrip1_ItemClicked_1;
             // 
             // menuBaoHanh
             // 
@@ -95,6 +96,7 @@
             ShowIcon = false;
             Text = "Trang chủ";
             WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            Load += FormTrangChu_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -103,11 +105,11 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        public System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuBaoHanh;
         private System.Windows.Forms.ToolStripMenuItem menuSanpham;
         private System.Windows.Forms.ToolStripMenuItem menuKhachHang;
-        private System.Windows.Forms.ToolStripMenuItem menuThongKe;
-        private System.Windows.Forms.ToolStripMenuItem tàiKToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem menuThongKe;
+        public System.Windows.Forms.ToolStripMenuItem tàiKToolStripMenuItem;
     }
 }

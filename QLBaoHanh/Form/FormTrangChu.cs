@@ -56,5 +56,15 @@ namespace QLBaoHanh
             f.MdiParent = this;
             f.Show();
         }
+
+        private void FormTrangChu_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void menuStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

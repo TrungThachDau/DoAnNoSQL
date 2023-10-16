@@ -38,6 +38,11 @@ namespace QLBaoHanh
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            if(txtMoTaLoi.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập mô tả lỗi");
+                return;
+            }
             int maPhieu = int.Parse(DateTime.Now.ToString("ddmmyy"));
             string moTaLoi = txtMoTaLoi.Text;
             string NgayYeuCau = DateTime.Now.ToString(format: "dd-MM-yyyy");
@@ -56,7 +61,7 @@ namespace QLBaoHanh
             string sdt = kh.DienThoai;
             string ngaySinh = kh.NgaySinh;
             string phai = kh.Phai;
-
+            
             mongoDBHelper.InsertOneDocument<PhieuBaoHanh>("bh", new PhieuBaoHanh
             {
                 NgayYCBaoHanh = NgayYeuCau,

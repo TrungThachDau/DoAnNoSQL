@@ -145,60 +145,112 @@ public class XuLyTruyVan
         cbb.ValueMember = "TenKH";
         return cbb;
     }
+        //public DataTable DocPhieuBaoHanh()
+        //{
+        //    DataTable dt = new DataTable();
+        //    // Tạo các cột cho DataTable
+        //    // Đặt kiểu dữ liệu cho cột
+        //    dt.Columns.Add("Ma");
+        //    dt.Columns.Add("NgayYeuCauBH");
+        //    dt.Columns.Add("TenKhachHang");
+        //    dt.Columns.Add("TinhTrangXuLy");
+        //    dt.Columns.Add("NgayCapNhat");
+        //    var list = GetAllDocuments<PhieuBaoHanh>("bh");
 
-		public DataTable GetWarrantyStatistics()  //
-		{
+        //    foreach (var item in list)
+        //    {
+        //        // Thêm dòng dữ liệu vào DataTable
+        //        dt.Rows.Add(item.Id, item.NgayYCBaoHanh, item.KhachHang.TenKH, item.TinhTrangXuLy, item.NgayCapNhat);
+        //    }
+        //    return dt;
+        //}
+  //  public DataTable GetWarrantyStatistics()  //
+		//{
 
 
-			// Lấy danh sách phiếu bảo hành
-			var warrantyCollection = db.GetCollection<PhieuBaoHanh>("bh");
-			var warrantyFilter = Builders<PhieuBaoHanh>.Filter.Empty;
-			var warrantyDocuments = warrantyCollection.Find(warrantyFilter).ToList();
+		//	// Lấy danh sách phiếu bảo hành
+		//	var warrantyCollection = db.GetCollection<PhieuBaoHanh>("bh");
+		//	var warrantyFilter = Builders<PhieuBaoHanh>.Filter.Empty;
+		//	var warrantyDocuments = warrantyCollection.Find(warrantyFilter).ToList();
+            
+		//	// Lấy danh sách sản phẩm
+		//	var productCollection = db.GetCollection<SanPham>("sp");
+		//	var productFilter = Builders<SanPham>.Filter.Empty;
+		//	var productDocuments = productCollection.Find(productFilter).ToList();
 
-			// Lấy danh sách sản phẩm
-			var productCollection = db.GetCollection<SanPham>("sp");
-			var productFilter = Builders<SanPham>.Filter.Empty;
-			var productDocuments = productCollection.Find(productFilter).ToList();
+		//	// Tạo DataTable để lưu kết quả thống kê
+		//	DataTable resultDataTable = new DataTable();
+		//	resultDataTable.Columns.Add("MaSp");
+		//	resultDataTable.Columns.Add("TenSanPham");
+		//	resultDataTable.Columns.Add("Gia");
+		//	resultDataTable.Columns.Add("NgayKichHoatBH");
+		//	resultDataTable.Columns.Add("TenKhachHang");
+		//	resultDataTable.Columns.Add("DiachiKhachHang");
+		//	resultDataTable.Columns.Add("PhaiKhachHang");
+		//	resultDataTable.Columns.Add("SDTKhachHang");
+		//	resultDataTable.Columns.Add("NgayYeuCauBH");
 
-			// Tạo DataTable để lưu kết quả thống kê
-			DataTable resultDataTable = new DataTable();
-			resultDataTable.Columns.Add("Masp");
-			resultDataTable.Columns.Add("TenSanPham");
-			resultDataTable.Columns.Add("Gia");
-			resultDataTable.Columns.Add("NgayKichHoatBH");
-			resultDataTable.Columns.Add("TenKhachHang");
-			resultDataTable.Columns.Add("DiachiKhachHang");
-			resultDataTable.Columns.Add("PhaiKhachHang");
-			resultDataTable.Columns.Add("SDTKhachHang");
-			resultDataTable.Columns.Add("NgayYeuCauBH");
+		//	// Kết hợp thông tin từ các bảng
+		//	foreach (var warrantyDoc in warrantyDocuments)
+		//	{
+		//		var masp = warrantyDoc.SanPham.MaSP;
 
-			// Kết hợp thông tin từ các bảng
-			foreach (var warrantyDoc in warrantyDocuments)
-			{
-				var masp = warrantyDoc.SanPham.MaSP;
+		//		var productDoc = productDocuments.FirstOrDefault(p => p.MaSP == masp);
 
-				var productDoc = productDocuments.FirstOrDefault(p => p.MaSP == masp);
+		//		if (productDoc != null)
+		//		{
+		//			var row = resultDataTable.NewRow();
+		//			row["Masp"] = masp;
+		//			row["TenSanPham"] = productDoc.TenSP;
+		//			row["Gia"] = productDoc.Gia;
+		//			row["NgayKichHoatBH"] = productDoc.NgayKichHoatBaoHanh;
+		//			row["TenKhachHang"] = warrantyDoc.KhachHang.TenKH;
+		//			row["DiachiKhachHang"] = warrantyDoc.KhachHang.DiaChi;
+		//			row["PhaiKhachHang"] = warrantyDoc.KhachHang.Phai;
+		//			row["SDTKhachHang"] = warrantyDoc.KhachHang.DienThoai;
+		//			row["NgayYeuCauBH"] = warrantyDoc.NgayYCBaoHanh;
 
-				if (productDoc != null)
-				{
-					var row = resultDataTable.NewRow();
-					row["Masp"] = masp;
-					row["TenSanPham"] = productDoc.TenSP;
-					row["Gia"] = productDoc.Gia;
-					row["NgayKichHoatBH"] = productDoc.NgayKichHoatBaoHanh;
-					row["TenKhachHang"] = warrantyDoc.KhachHang.TenKH;
-					row["DiachiKhachHang"] = warrantyDoc.KhachHang.DiaChi;
-					row["PhaiKhachHang"] = warrantyDoc.KhachHang.Phai;
-					row["SDTKhachHang"] = warrantyDoc.KhachHang.DienThoai;
-					row["NgayYeuCauBH"] = warrantyDoc.NgayYCBaoHanh;
+		//			resultDataTable.Rows.Add(row);
+		//		}
+		//	}
 
-					resultDataTable.Rows.Add(row);
-				}
-			}
+		//	return resultDataTable;
+		//}
+        public DataTable GetWarrantyStatistics()
+       {
+            DataTable resultDataTable = new DataTable();
+            resultDataTable.Columns.Add("MaSp");
+            resultDataTable.Columns.Add("TenSanPham");
+            resultDataTable.Columns.Add("Gia");
+            resultDataTable.Columns.Add("NgayKichHoatBH");
+            resultDataTable.Columns.Add("TenKhachHang");
+            resultDataTable.Columns.Add("DiachiKhachHang");
+            resultDataTable.Columns.Add("PhaiKhachHang");
+            resultDataTable.Columns.Add("SDTKhachHang");
+            resultDataTable.Columns.Add("NgayYeuCauBH");
+            var list = GetAllDocuments<PhieuBaoHanh>("bh");
+            foreach(var item in list)
+            {
+                var masp = item.SanPham.MaSP;
+                if(masp!=null)
+                {
+                    var row = resultDataTable.NewRow();
+                    row["Masp"] = masp;
+                    row["TenSanPham"] = item.SanPham.TenSP;
+                    row["Gia"] = item.SanPham.Gia;
+                    row["NgayKichHoatBH"] = item.SanPham.NgayKichHoatBaoHanh;
+                    row["TenKhachHang"] = item.KhachHang.TenKH;
+                    row["DiachiKhachHang"] = item.KhachHang.DiaChi;
+                    row["PhaiKhachHang"] = item.KhachHang.Phai;
+                    row["SDTKhachHang"] = item.KhachHang.DienThoai;
+                    row["NgayYeuCauBH"] = item.NgayYCBaoHanh;
 
-			return resultDataTable;
-		}
-		public DataTable GetWarrantyStatisticsByYear(int year)  //
+                    resultDataTable.Rows.Add(row);
+                }
+            }
+            return resultDataTable;
+        }
+        public DataTable GetWarrantyStatisticsByYear(int year)  //
 		{
 			// Lấy danh sách phiếu bảo hành dựa trên năm
 			var warrantyCollection = db.GetCollection<PhieuBaoHanh>("bh");
@@ -224,7 +276,7 @@ public class XuLyTruyVan
 
 				// Lấy thông tin sản phẩm từ cơ sở dữ liệu sản phẩm
 				var productCollection = db.GetCollection<SanPham>("sp");
-				var productFilter = Builders<SanPham>.Filter.Eq("Masp", masp);
+				var productFilter = Builders<SanPham>.Filter.Eq("MaSp", masp);
 				var productDoc = productCollection.Find(productFilter).FirstOrDefault();
 
 				if (productDoc != null)
@@ -265,7 +317,7 @@ public class XuLyTruyVan
 
 			// Tạo DataTable để lưu kết quả thống kê
 			DataTable resultDataTable = new DataTable();
-			resultDataTable.Columns.Add("Masp");
+			resultDataTable.Columns.Add("MaSp");
 			resultDataTable.Columns.Add("TenSanPham");
 			resultDataTable.Columns.Add("Gia");
 			resultDataTable.Columns.Add("NgayKichHoatBH");
@@ -282,7 +334,7 @@ public class XuLyTruyVan
 
 				// Lấy thông tin sản phẩm từ cơ sở dữ liệu sản phẩm
 				var productCollection = db.GetCollection<SanPham>("sp");
-				var productFilter = Builders<SanPham>.Filter.Eq("Masp", masp);
+				var productFilter = Builders<SanPham>.Filter.Eq("MaSp", masp);
 				var productDoc = productCollection.Find(productFilter).FirstOrDefault();
 
 				if (productDoc != null)
