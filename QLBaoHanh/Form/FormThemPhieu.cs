@@ -90,6 +90,10 @@ namespace QLBaoHanh
                 NgayCapNhat = DateTime.Now.ToString(format: "dd-MM-yyyy")
             });
             MessageBox.Show("Thêm thành công");
+            FormPhieuBaoHanh form = new FormPhieuBaoHanh();
+            form.LoadData();
+            this.Close();
+
 
         }
     }

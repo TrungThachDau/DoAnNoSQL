@@ -42,6 +42,28 @@ public class XuLyTruyVan
         }
         return dt;
     }
+    public DataTable TimPhieuBaoHanh(string TenKH)
+    {
+        DataTable dt = new DataTable();
+        // Tạo các cột cho DataTable
+        // Đặt kiểu dữ liệu cho cột
+        dt.Columns.Add("Ma");
+        dt.Columns.Add("NgayYeuCauBH");
+        dt.Columns.Add(
+            "TenKhachHang");
+        dt.Columns.Add("TinhTrangXuLy");
+        dt.Columns.Add("NgayCapNhat");
+        var list = GetAllDocuments<PhieuBaoHanh>("bh");
+        foreach (var item in list)
+        {
+            if (item.KhachHang.TenKH.Contains(TenKH))
+            {
+                // Thêm dòng dữ liệu vào DataTable
+                dt.Rows.Add(item.Id, item.NgayYCBaoHanh, item.KhachHang.TenKH, item.TinhTrangXuLy, item.NgayCapNhat);
+            }
+        }
+        return dt;
+    }
     public DataTable DocSanPham()
     {
         DataTable dt = new DataTable();
@@ -400,6 +422,11 @@ public class XuLyTruyVan
         var collection = db.GetCollection<BsonDocument>(collectionName);
         collection.InsertOne(document);
     }
+    public void InsertOneDocumentById<BsonDocument>(string collectionName, BsonDocument documentId)
+    {
+        var collection = db.GetCollection<BsonDocument>(collectionName);
+        collection.InsertOne(documentId);
+    }
     public void InsertManyDocument<BsonDocument>(string collectionName, List<BsonDocument> documents)
     {
         var collection = db.GetCollection<BsonDocument>(collectionName);
@@ -409,6 +436,12 @@ public class XuLyTruyVan
     {
         var collection = db.GetCollection<BsonDocument>(collectionName);
         var filter = Builders<BsonDocument>.Filter.Eq(field, value);
+        collection.ReplaceOne(filter, document);
+    }
+    public void UpdateOneDocumentById<BsonDocument>(string collectionName, string objectId, BsonDocument document)
+    {
+        var collection = db.GetCollection<BsonDocument>(collectionName);
+        var filter = Builders<BsonDocument>.Filter.Eq("_id", ObjectId.Parse(objectId));
         collection.ReplaceOne(filter, document);
     }
 

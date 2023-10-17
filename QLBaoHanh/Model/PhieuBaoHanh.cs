@@ -12,6 +12,7 @@ namespace QLBaoHanh.Model
     public class PhieuBaoHanh
     {
         [BsonId]
+        [BsonElement("_id")]
         public ObjectId Id { get; set; }
         [BsonElement("NgayYeuCauBH")]
         public string NgayYCBaoHanh { get; set; }

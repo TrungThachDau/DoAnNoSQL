@@ -35,7 +35,6 @@
             Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             label1 = new System.Windows.Forms.Label();
-            label2 = new System.Windows.Forms.Label();
             txt_search = new System.Windows.Forms.TextBox();
             btn_Thoat = new System.Windows.Forms.Button();
             btn_Huy = new System.Windows.Forms.Button();
@@ -46,7 +45,6 @@
             label5 = new System.Windows.Forms.Label();
             txtNgayYC = new System.Windows.Forms.TextBox();
             txtTenKH = new System.Windows.Forms.TextBox();
-            txtDiaChi = new System.Windows.Forms.TextBox();
             txtSDT = new System.Windows.Forms.TextBox();
             txtSanPham = new System.Windows.Forms.TextBox();
             txtIMEI = new System.Windows.Forms.TextBox();
@@ -60,6 +58,8 @@
             label10 = new System.Windows.Forms.Label();
             label11 = new System.Windows.Forms.Label();
             label12 = new System.Windows.Forms.Label();
+            button1 = new System.Windows.Forms.Button();
+            cbbTinh = new System.Windows.Forms.ComboBox();
             cbbTinhTrang = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -75,6 +75,7 @@
             dataGridView1.Size = new System.Drawing.Size(782, 529);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellClick += dataGridView1_CellClick;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Column3
             // 
@@ -127,20 +128,9 @@
             label1.TabIndex = 1;
             label1.Text = "BẢO HÀNH SẢN PHẨM";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label2.Location = new System.Drawing.Point(39, 188);
-            label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(113, 29);
-            label2.TabIndex = 2;
-            label2.Text = "Tìm kiếm";
-            // 
             // txt_search
             // 
-            txt_search.Location = new System.Drawing.Point(170, 188);
+            txt_search.Location = new System.Drawing.Point(39, 195);
             txt_search.Margin = new System.Windows.Forms.Padding(5);
             txt_search.Name = "txt_search";
             txt_search.Size = new System.Drawing.Size(388, 30);
@@ -164,8 +154,9 @@
             btn_Huy.Name = "btn_Huy";
             btn_Huy.Size = new System.Drawing.Size(136, 58);
             btn_Huy.TabIndex = 5;
-            btn_Huy.Text = "Hủy";
+            btn_Huy.Text = "Làm mới";
             btn_Huy.UseVisualStyleBackColor = true;
+            btn_Huy.Click += btn_Huy_Click;
             // 
             // btn_sua
             // 
@@ -174,7 +165,7 @@
             btn_sua.Name = "btn_sua";
             btn_sua.Size = new System.Drawing.Size(136, 58);
             btn_sua.TabIndex = 6;
-            btn_sua.Text = "Xem chi tiết";
+            btn_sua.Text = "Cập nhật phiếu";
             btn_sua.UseVisualStyleBackColor = true;
             btn_sua.Click += btn_sua_Click;
             // 
@@ -231,13 +222,6 @@
             txtTenKH.ReadOnly = true;
             txtTenKH.Size = new System.Drawing.Size(335, 30);
             txtTenKH.TabIndex = 14;
-            // 
-            // txtDiaChi
-            // 
-            txtDiaChi.Location = new System.Drawing.Point(1025, 400);
-            txtDiaChi.Name = "txtDiaChi";
-            txtDiaChi.Size = new System.Drawing.Size(335, 30);
-            txtDiaChi.TabIndex = 15;
             // 
             // txtSDT
             // 
@@ -349,14 +333,31 @@
             label12.TabIndex = 29;
             label12.Text = "Tình trạng xử lý";
             // 
+            // button1
+            // 
+            button1.Location = new System.Drawing.Point(448, 193);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(201, 32);
+            button1.TabIndex = 31;
+            button1.Text = "Tìm kiếm khách hàng";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // cbbTinh
+            // 
+            cbbTinh.FormattingEnabled = true;
+            cbbTinh.Location = new System.Drawing.Point(1025, 404);
+            cbbTinh.Name = "cbbTinh";
+            cbbTinh.Size = new System.Drawing.Size(335, 31);
+            cbbTinh.TabIndex = 32;
+            // 
             // cbbTinhTrang
             // 
             cbbTinhTrang.FormattingEnabled = true;
-            cbbTinhTrang.Items.AddRange(new object[] { "Đang xử lý", "Chưa xử lý" });
-            cbbTinhTrang.Location = new System.Drawing.Point(1032, 803);
+            cbbTinhTrang.Location = new System.Drawing.Point(1025, 796);
             cbbTinhTrang.Name = "cbbTinhTrang";
-            cbbTinhTrang.Size = new System.Drawing.Size(328, 31);
-            cbbTinhTrang.TabIndex = 30;
+            cbbTinhTrang.Size = new System.Drawing.Size(335, 31);
+            cbbTinhTrang.TabIndex = 33;
             // 
             // FormPhieuBaoHanh
             // 
@@ -364,6 +365,8 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(1396, 1027);
             Controls.Add(cbbTinhTrang);
+            Controls.Add(cbbTinh);
+            Controls.Add(button1);
             Controls.Add(label12);
             Controls.Add(label11);
             Controls.Add(label10);
@@ -377,7 +380,6 @@
             Controls.Add(txtIMEI);
             Controls.Add(txtSanPham);
             Controls.Add(txtSDT);
-            Controls.Add(txtDiaChi);
             Controls.Add(txtTenKH);
             Controls.Add(txtNgayYC);
             Controls.Add(label5);
@@ -388,7 +390,6 @@
             Controls.Add(btn_Huy);
             Controls.Add(btn_Thoat);
             Controls.Add(txt_search);
-            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(dataGridView1);
             Name = "FormPhieuBaoHanh";
@@ -405,7 +406,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.Button btn_Thoat;
         private System.Windows.Forms.Button btn_Huy;
@@ -416,7 +416,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNgayYC;
         private System.Windows.Forms.TextBox txtTenKH;
-        private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.TextBox txtSanPham;
         private System.Windows.Forms.TextBox txtIMEI;
@@ -430,12 +429,14 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox cbbTinhTrang;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayYeuCauBH;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cbbTinh;
+        private System.Windows.Forms.ComboBox cbbTinhTrang;
     }
 }
 
