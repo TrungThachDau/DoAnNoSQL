@@ -35,19 +35,7 @@ namespace QLBaoHanh
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
-            {
-                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                txtMaSp.Text = row.Cells[0].Value.ToString();
-                txtTenSp.Text = row.Cells[1].Value.ToString();
-                txtGia.Text = row.Cells[2].Value.ToString();
-                txtImei.Text = row.Cells[3].Value.ToString();
-                txtTSKT.Text = row.Cells[4].Value.ToString();
-                txtNSX.Text = row.Cells[5].Value.ToString();
-                dtpNgayKichHoat.Text = row.Cells[6].Value.ToString();
-
-
-            }
+            
 
         }
 
@@ -86,7 +74,7 @@ namespace QLBaoHanh
         {
             string maSP = txtMaSp.Text;
             XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
-            mongoDBHelper.DeleteOneDocument<SanPham>("sp", "Masp", maSP);
+            mongoDBHelper.DeleteOneDocument<SanPham>("sp", "MaSp", maSP);
             LoadSanPham();
         }
 
@@ -107,7 +95,7 @@ namespace QLBaoHanh
             string ngayKichHoat = dtpNgayKichHoat.Value.ToString("dd-MM-yyyy");
 
             XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
-            mongoDBHelper.UpdateOneDocument<SanPham>("sp", "Masp", maSP, new SanPham
+            mongoDBHelper.UpdateOneDocument<SanPham>("sp", "MaSp", maSP, new SanPham
             {
                 MaSP = maSP,
                 TenSP = tenSP,
@@ -132,6 +120,23 @@ namespace QLBaoHanh
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                txtMaSp.Text = row.Cells[0].Value.ToString();
+                txtTenSp.Text = row.Cells[1].Value.ToString();
+                txtGia.Text = row.Cells[2].Value.ToString();
+                txtImei.Text = row.Cells[3].Value.ToString();
+                txtTSKT.Text = row.Cells[4].Value.ToString();
+                txtNSX.Text = row.Cells[5].Value.ToString();
+                dtpNgayKichHoat.Text = row.Cells[6].Value.ToString();
+
+
+            }
         }
     }
 }
