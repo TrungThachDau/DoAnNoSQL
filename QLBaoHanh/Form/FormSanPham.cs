@@ -105,6 +105,7 @@ namespace QLBaoHanh
                 NhaSanXuat = nsx,
                 NgayKichHoatBaoHanh = ngayKichHoat
             });
+            LoadSanPham();
         }
 
         private void btn_Huy_Click(object sender, EventArgs e)
