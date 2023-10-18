@@ -53,20 +53,20 @@ namespace QLBaoHanh
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if(txtMaSp.Text == "" || txtTenSp.Text == "" || txtGia.Text == "" || txtImei.Text == "" || txtTSKT.Text == "" || txtNSX.Text == "" || dtpNgayKichHoat.Text == "")
+            if (txtMaSp.Text == "" || txtTenSp.Text == "" || txtGia.Text == "" || txtImei.Text == "" || txtTSKT.Text == "" || txtNSX.Text == "" || dtpNgayKichHoat.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                 return;
             }
-            
+
             string maSP = txtMaSp.Text;
             string tenSP = txtTenSp.Text;
             int gia = int.Parse(txtGia.Text);
             string imei = txtImei.Text;
             string tskt = txtTSKT.Text;
             string nsx = txtNSX.Text;
-            string ngayKichHoat = dtpNgayKichHoat.Text;
-            
+            string ngayKichHoat = dtpNgayKichHoat.Value.ToString("dd-MM-yyyy");
+
             XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
             mongoDBHelper.InsertOneDocument<SanPham>("sp", new SanPham
             {
@@ -92,7 +92,7 @@ namespace QLBaoHanh
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if(txtMaSp.Text == "")
+            if (txtMaSp.Text == "")
             {
                 MessageBox.Show("Vui lòng chọn sản phẩm cần sửa");
                 return;
@@ -104,8 +104,8 @@ namespace QLBaoHanh
             string imei = txtImei.Text;
             string tskt = txtTSKT.Text;
             string nsx = txtNSX.Text;
-            string ngayKichHoat = dtpNgayKichHoat.Text;
-            
+            string ngayKichHoat = dtpNgayKichHoat.Value.ToString("dd-MM-yyyy");
+
             XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
             mongoDBHelper.UpdateOneDocument<SanPham>("sp", "Masp", maSP, new SanPham
             {
