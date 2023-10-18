@@ -9,4 +9,112 @@
   "Gia": 30000000,
   "NgayKichHoatBH": "20-07-2023",
   "NhaSanXuat": "Apple"
+},
+{
+  "_id": {
+    "$oid": "652feae54b4a64cd4db5e99a"
+  },
+  "MaSp": "SP002",
+  "TenSanPham": "Galaxy S23+",
+  "ImeiSanPham": "032813282832",
+  "ThongSoKyThuat": "Snap Dragon 8Gen2, 256GB, màu hồng",
+  "Gia": 21000000,
+  "NgayKichHoatBH": "18-10-2023",
+  "NhaSanXuat": "Samsung"
+},
+{
+  "_id": {
+    "$oid": "652febbc4b4a64cd4db5ea4f"
+  },
+  "MaSp": "SP003",
+  "TenSanPham": "Galaxy S22",
+  "ImeiSanPham": "9090293232",
+  "ThongSoKyThuat": "Snap Dragon 8Gen2, 256GB, màu hồng",
+  "Gia": 21000000,
+  "NgayKichHoatBH": "18-10-2022",
+  "NhaSanXuat": "Samsung"
+},
+{
+  "_id": {
+    "$oid": "652febe44b4a64cd4db5ea6a"
+  },
+  "MaSp": "SP004",
+  "TenSanPham": "iPhone 15",
+  "ImeiSanPham": "032931993321",
+  "ThongSoKyThuat": "Apple A15 Pro",
+  "Gia": 19000000,
+  "NgayKichHoatBH": "01-01-2023",
+  "NhaSanXuat": "Apple"
+},
+{
+  "_id": {
+    "$oid": "652fecfc4b4a64cd4db5eb19"
+  },
+  "MaSp": "SP005",
+  "TenSanPham": "iPhone 11",
+  "ImeiSanPham": "032193193213291",
+  "ThongSoKyThuat": "Màu hồng, 64GB",
+  "Gia": 9000000,
+  "NgayKichHoatBH": "01-05-2019",
+  "NhaSanXuat": "Apple"
+},
+{
+  "_id": {
+    "$oid": "652fed3e4b4a64cd4db5eb42"
+  },
+  "MaSp": "SP006",
+  "TenSanPham": "Rog Phone 5",
+  "ImeiSanPham": "0231932913",
+  "ThongSoKyThuat": "Chip thần thánh",
+  "Gia": 20000000,
+  "NgayKichHoatBH": "02-11-2021",
+  "NhaSanXuat": "Asus"
+},
+{
+  "_id": {
+    "$oid": "652fed804b4a64cd4db5eb6d"
+  },
+  "MaSp": "SP007",
+  "TenSanPham": "iPhone 13 mini",
+  "ImeiSanPham": "0312731999u",
+  "ThongSoKyThuat": "Màu xanh 128GB",
+  "Gia": 13000000,
+  "NgayKichHoatBH": "18-10-2021",
+  "NhaSanXuat": "Apple"
+},
+{
+  "_id": {
+    "$oid": "652fedbc4b4a64cd4db5eb98"
+  },
+  "MaSp": "SP008",
+  "TenSanPham": "Galaxy A23",
+  "ImeiSanPham": "323993293232",
+  "ThongSoKyThuat": "Màu trắng 128GB",
+  "Gia": 5000000,
+  "NgayKichHoatBH": "30-04-2022",
+  "NhaSanXuat": "Apple"
+},
+{
+  "_id": {
+    "$oid": "652fedf64b4a64cd4db5ebbf"
+  },
+  "MaSp": "SP009",
+  "TenSanPham": "iPhone 6s",
+  "ImeiSanPham": "023219321931",
+  "ThongSoKyThuat": "32GB màu bạc",
+  "Gia": 800000,
+  "NgayKichHoatBH": "07-04-2015",
+  "NhaSanXuat": "Apple"
+},
+{
+  "_id": {
+    "$oid": "652fee1e4b4a64cd4db5ebda"
+  },
+  "MaSp": "SP010",
+  "TenSanPham": "Galaxy J7 Pro",
+  "ImeiSanPham": "0238238381",
+  "ThongSoKyThuat": "64GB màu vàng",
+  "Gia": 3000000,
+  "NgayKichHoatBH": "07-06-2016",
+  "NhaSanXuat": "Samsung"
 }]

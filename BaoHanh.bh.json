@@ -1,25 +1,150 @@
 [{
   "_id": {
-    "$oid": "6529fde10a78b52b333fb408"
+    "$oid": "653000c1e9cf0a388c2e0b86"
   },
-  "NgayYeuCauBH": "14-10-2023",
+  "NgayYeuCauBH": "10-10-2023",
   "KhachHang": {
-    "TenKhachHang": "Nguyễn Thanh Tùng",
-    "DiaChi": "Sài Gòn",
-    "SDT": "0912345678",
-    "NgaySinh": "01-01-2000",
+    "TenKhachHang": "Nguyễn Thị Lệ",
+    "DiaChi": "Tiền Giang",
+    "SDT": "029293729",
+    "NgaySinh": "01-10-1989",
+    "GioiTinh": "Nữ"
+  },
+  "SamPham": {
+    "MaSp": "SP006",
+    "TenSanPham": "Rog Phone 5",
+    "ImeiSanPham": "0231932913",
+    "ThongSoKyThuat": "Chip thần thánh",
+    "Gia": 20000000,
+    "NgayKichHoatBH": "02-11-2021",
+    "NhaSanXuat": "Asus"
+  },
+  "MoTaLoi": "Thay màn hình",
+  "TinhTrangXuLy": "Hoàn thành",
+  "NgayCapNhat": "18-10-2023"
+},
+{
+  "_id": {
+    "$oid": "65300145e9cf0a388c2e0b8b"
+  },
+  "NgayYeuCauBH": "09-09-2023",
+  "KhachHang": {
+    "TenKhachHang": "Bùi Nguyễn Gia Lạc",
+    "DiaChi": "Trà Vinh",
+    "SDT": "0825471111",
+    "NgaySinh": "26-10-2002",
     "GioiTinh": "Nam"
   },
   "SamPham": {
-    "MaSp": "SP002",
-    "TenSanPham": "Điện thoại iPhone 14 Pro Max",
-    "ImeiSanPham": "355345678901234",
-    "ThongSoKyThuat": "Màn hình: 6.7 inch Super Retina XDR OLED Chip A16 Bionic Cam trước 3 camera sau 48MP, 12MP, 12MP Camera trước: 12MP Dung lượng pin: 4352mAh",
-    "Gia": 30000000,
-    "NgayKichHoatBH": "20-07-2023",
+    "MaSp": "SP007",
+    "TenSanPham": "iPhone 13 mini",
+    "ImeiSanPham": "0312731999u",
+    "ThongSoKyThuat": "Màu xanh 128GB",
+    "Gia": 13000000,
+    "NgayKichHoatBH": "18-10-2021",
     "NhaSanXuat": "Apple"
   },
-  "MoTaLoi": "sdsadads",
+  "MoTaLoi": "Màn hình sọc màn",
   "TinhTrangXuLy": "Chưa xử lý",
-  "NgayCapNhat": "14-10-2023"
+  "NgayCapNhat": ""
+},
+{
+  "_id": {
+    "$oid": "653001c2e9cf0a388c2e0b93"
+  },
+  "NgayYeuCauBH": "12-10-2023",
+  "KhachHang": {
+    "TenKhachHang": "Lê Thị Yến Nhi",
+    "DiaChi": "Tiền Giang",
+    "SDT": "0774878333",
+    "NgaySinh": "04-05-2002",
+    "GioiTinh": "Nữ"
+  },
+  "SamPham": {
+    "MaSp": "SP010",
+    "TenSanPham": "Galaxy J7 Pro",
+    "ImeiSanPham": "0238238381",
+    "ThongSoKyThuat": "64GB màu vàng",
+    "Gia": 3000000,
+    "NgayKichHoatBH": "07-06-2016",
+    "NhaSanXuat": "Samsung"
+  },
+  "MoTaLoi": "Máy bị vô nước",
+  "TinhTrangXuLy": "Đang xử lý",
+  "NgayCapNhat": "13-10-2023"
+},
+{
+  "_id": {
+    "$oid": "6530021de9cf0a388c2e0b9a"
+  },
+  "NgayYeuCauBH": "08-10-2023",
+  "KhachHang": {
+    "TenKhachHang": "Quách Phú Thành",
+    "DiaChi": "Phú Yên",
+    "SDT": "0733513557",
+    "NgaySinh": "01-10-1999",
+    "GioiTinh": "Nam"
+  },
+  "SamPham": {
+    "MaSp": "SP009",
+    "TenSanPham": "iPhone 6s",
+    "ImeiSanPham": "023219321931",
+    "ThongSoKyThuat": "32GB màu bạc",
+    "Gia": 800000,
+    "NgayKichHoatBH": "07-04-2015",
+    "NhaSanXuat": "Apple"
+  },
+  "MoTaLoi": "Thay pin",
+  "TinhTrangXuLy": "Đang xử lý",
+  "NgayCapNhat": "10-10-2023"
+},
+{
+  "_id": {
+    "$oid": "653002c7e9cf0a388c2e0b9f"
+  },
+  "NgayYeuCauBH": "12-10-2023",
+  "KhachHang": {
+    "TenKhachHang": "Quách Phú Thành",
+    "DiaChi": "Phú Yên",
+    "SDT": "0733513557",
+    "NgaySinh": "01-10-1999",
+    "GioiTinh": "Nam"
+  },
+  "SamPham": {
+    "MaSp": "SP008",
+    "TenSanPham": "Galaxy A23",
+    "ImeiSanPham": "323993293232",
+    "ThongSoKyThuat": "Màu trắng 128GB",
+    "Gia": 5000000,
+    "NgayKichHoatBH": "30-04-2022",
+    "NhaSanXuat": "Apple"
+  },
+  "MoTaLoi": "Máy bị vô nước",
+  "TinhTrangXuLy": "Đang xử lý",
+  "NgayCapNhat": "13-10-2023"
+},
+{
+  "_id": {
+    "$oid": "65300370e9cf0a388c2e0ba4"
+  },
+  "NgayYeuCauBH": "10-09-2023",
+  "KhachHang": {
+    "TenKhachHang": "Hồ Huy Nam",
+    "DiaChi": "Lâm Đồng",
+    "SDT": "0775449789",
+    "NgaySinh": "01-10-2000",
+    "GioiTinh": "Nam"
+  },
+  "SamPham": {
+    "MaSp": "SP008",
+    "TenSanPham": "Galaxy A23",
+    "ImeiSanPham": "323993293232",
+    "ThongSoKyThuat": "Màu trắng 128GB",
+    "Gia": 5000000,
+    "NgayKichHoatBH": "30-04-2022",
+    "NhaSanXuat": "Apple"
+  },
+  "MoTaLoi": "Liệt phím tăng giảm âm lượng",
+  "TinhTrangXuLy": "Hoàn thành",
+  "NgayCapNhat": "18-09-2023"
 }]

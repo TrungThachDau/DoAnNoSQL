@@ -32,10 +32,10 @@ namespace QLBaoHanh
 
         public void LoadKhachHang()
         {
-            
+
             XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
             dataGridView1.DataSource = mongoDBHelper.DocKhachHang();
-            
+
 
         }
 
@@ -126,9 +126,9 @@ namespace QLBaoHanh
                     }
                 }
                 cbbTinh.Text = diaChiDaChon;
-                foreach(var item in cbbGioiTinh.Items)
+                foreach (var item in cbbGioiTinh.Items)
                 {
-                    if(item.ToString()==gioiTinh)
+                    if (item.ToString() == gioiTinh)
                     {
                         cbbGioiTinh.Text = gioiTinh;
                         break;

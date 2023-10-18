@@ -134,7 +134,7 @@
             txtMaSp.Location = new System.Drawing.Point(122, 508);
             txtMaSp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             txtMaSp.Name = "txtMaSp";
-            txtMaSp.Size = new System.Drawing.Size(215, 28);
+            txtMaSp.Size = new System.Drawing.Size(215, 22);
             txtMaSp.TabIndex = 1;
             // 
             // txtTenSp
@@ -142,7 +142,7 @@
             txtTenSp.Location = new System.Drawing.Point(462, 508);
             txtTenSp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             txtTenSp.Name = "txtTenSp";
-            txtTenSp.Size = new System.Drawing.Size(212, 28);
+            txtTenSp.Size = new System.Drawing.Size(212, 22);
             txtTenSp.TabIndex = 2;
             // 
             // txtImei
@@ -150,7 +150,7 @@
             txtImei.Location = new System.Drawing.Point(802, 514);
             txtImei.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             txtImei.Name = "txtImei";
-            txtImei.Size = new System.Drawing.Size(253, 28);
+            txtImei.Size = new System.Drawing.Size(253, 22);
             txtImei.TabIndex = 3;
             // 
             // txtGia
@@ -158,7 +158,7 @@
             txtGia.Location = new System.Drawing.Point(462, 571);
             txtGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             txtGia.Name = "txtGia";
-            txtGia.Size = new System.Drawing.Size(212, 28);
+            txtGia.Size = new System.Drawing.Size(212, 22);
             txtGia.TabIndex = 5;
             // 
             // txtNSX
@@ -166,12 +166,12 @@
             txtNSX.Location = new System.Drawing.Point(122, 568);
             txtNSX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             txtNSX.Name = "txtNSX";
-            txtNSX.Size = new System.Drawing.Size(215, 28);
+            txtNSX.Size = new System.Drawing.Size(215, 22);
             txtNSX.TabIndex = 6;
             // 
             // txtTSKT
             // 
-            txtTSKT.Location = new System.Drawing.Point(134, 621);
+            txtTSKT.Location = new System.Drawing.Point(142, 621);
             txtTSKT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             txtTSKT.Multiline = true;
             txtTSKT.Name = "txtTSKT";
@@ -185,7 +185,7 @@
             label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label1.Location = new System.Drawing.Point(16, 512);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(124, 24);
+            label1.Size = new System.Drawing.Size(88, 16);
             label1.TabIndex = 8;
             label1.Text = "Mã sản phẩm";
             // 
@@ -195,7 +195,7 @@
             label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label2.Location = new System.Drawing.Point(343, 514);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(132, 24);
+            label2.Size = new System.Drawing.Size(93, 16);
             label2.TabIndex = 9;
             label2.Text = "Tên sản phẩm";
             // 
@@ -205,7 +205,7 @@
             label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label3.Location = new System.Drawing.Point(680, 517);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(45, 24);
+            label3.Size = new System.Drawing.Size(32, 16);
             label3.TabIndex = 10;
             label3.Text = "Imei";
             // 
@@ -215,7 +215,7 @@
             label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label4.Location = new System.Drawing.Point(343, 577);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(38, 24);
+            label4.Size = new System.Drawing.Size(28, 16);
             label4.TabIndex = 11;
             label4.Text = "Giá";
             // 
@@ -225,7 +225,7 @@
             label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label5.Location = new System.Drawing.Point(16, 571);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(120, 24);
+            label5.Size = new System.Drawing.Size(84, 16);
             label5.TabIndex = 12;
             label5.Text = "Nhà sản xuất";
             // 
@@ -235,7 +235,7 @@
             label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label6.Location = new System.Drawing.Point(680, 574);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(134, 24);
+            label6.Size = new System.Drawing.Size(96, 16);
             label6.TabIndex = 13;
             label6.Text = "Ngày kích hoạt";
             // 
@@ -244,7 +244,7 @@
             dtpNgayKichHoat.Location = new System.Drawing.Point(802, 569);
             dtpNgayKichHoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             dtpNgayKichHoat.Name = "dtpNgayKichHoat";
-            dtpNgayKichHoat.Size = new System.Drawing.Size(253, 28);
+            dtpNgayKichHoat.Size = new System.Drawing.Size(253, 22);
             dtpNgayKichHoat.TabIndex = 14;
             // 
             // label7
@@ -253,7 +253,7 @@
             label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label7.Location = new System.Drawing.Point(16, 624);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(159, 24);
+            label7.Size = new System.Drawing.Size(112, 16);
             label7.TabIndex = 15;
             label7.Text = "Thông số kỹ thuật";
             // 
@@ -319,13 +319,13 @@
             label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label8.Location = new System.Drawing.Point(409, 29);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(241, 47);
+            label8.Size = new System.Drawing.Size(173, 33);
             label8.TabIndex = 21;
             label8.Text = "SẢN PHẨM";
             // 
             // FormSanPham
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(1075, 775);
             Controls.Add(label8);

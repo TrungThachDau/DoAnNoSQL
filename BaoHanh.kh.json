@@ -1,10 +1,140 @@
 [{
   "_id": {
-    "$oid": "6529f01d757349b031b2bc7d"
+    "$oid": "652ff23d44fc96354285d882"
+  },
+  "TenKhachHang": "Nguyễn Thị Lệ",
+  "DiaChi": "Tiền Giang",
+  "SDT": "029293729",
+  "NgaySinh": "01-10-1989",
+  "GioiTinh": "Nữ"
+},
+{
+  "_id": {
+    "$oid": "652ff26c44fc96354285d8a3"
+  },
+  "TenKhachHang": "Quách Phú Thành",
+  "DiaChi": "Phú Yên",
+  "SDT": "0733513557",
+  "NgaySinh": "01-10-1999",
+  "GioiTinh": "Nam"
+},
+{
+  "_id": {
+    "$oid": "652ff28b44fc96354285d8ba"
+  },
+  "TenKhachHang": "Hồ Huy Nam",
+  "DiaChi": "Lâm Đồng",
+  "SDT": "0775449789",
+  "NgaySinh": "01-10-2000",
+  "GioiTinh": "Nam"
+},
+{
+  "_id": {
+    "$oid": "652ff2be44fc96354285d8db"
+  },
+  "TenKhachHang": "Nguyễn Thị Lệ Nam",
+  "DiaChi": "Tiền Giang",
+  "SDT": "0828453668",
+  "NgaySinh": "10-09-1998",
+  "GioiTinh": "Nữ"
+},
+{
+  "_id": {
+    "$oid": "652ff2c744fc96354285d8e2"
   },
   "TenKhachHang": "Nguyễn Thanh Tùng",
   "DiaChi": "Sài Gòn",
   "SDT": "0912345678",
-  "NgaySinh": "01/01/2002",
+  "NgaySinh": "13-02-2002",
   "GioiTinh": "Nam"
+},
+{
+  "_id": {
+    "$oid": "652ff31d44fc96354285d91f"
+  },
+  "TenKhachHang": "Trương Minh Sang",
+  "DiaChi": "Tiền Giang",
+  "SDT": "0933747558",
+  "NgaySinh": "12-12-2002",
+  "GioiTinh": "Nam"
+},
+{
+  "_id": {
+    "$oid": "652ff35944fc96354285d946"
+  },
+  "TenKhachHang": "Vương Ngọc Hân",
+  "DiaChi": "Bến Tre",
+  "SDT": "0292976776",
+  "NgaySinh": "18-10-1997",
+  "GioiTinh": "Nữ"
+},
+{
+  "_id": {
+    "$oid": "652ff37e44fc96354285d965"
+  },
+  "TenKhachHang": "Lê Thị Thanh",
+  "DiaChi": "Tiền Giang",
+  "SDT": "0826354647",
+  "NgaySinh": "18-10-2003",
+  "GioiTinh": "Nữ"
+},
+{
+  "_id": {
+    "$oid": "652ff41044fc96354285d9bc"
+  },
+  "TenKhachHang": "Trần Văn Lai Minh",
+  "DiaChi": "Bình Thuận",
+  "SDT": "0933964657",
+  "NgaySinh": "22-10-1996",
+  "GioiTinh": "Nam"
+},
+{
+  "_id": {
+    "$oid": "652ff43344fc96354285d9d7"
+  },
+  "TenKhachHang": "Trần Nguyễn Thanh Nhi",
+  "DiaChi": "Khánh Hòa",
+  "SDT": "0937162223",
+  "NgaySinh": "09-10-1999",
+  "GioiTinh": "Nữ"
+},
+{
+  "_id": {
+    "$oid": "652ff49944fc96354285da16"
+  },
+  "TenKhachHang": "Dương Tiến Thành",
+  "DiaChi": "Khác",
+  "SDT": "0846399667",
+  "NgaySinh": "18-09-1996",
+  "GioiTinh": "Nam"
+},
+{
+  "_id": {
+    "$oid": "652ff4c244fc96354285da35"
+  },
+  "TenKhachHang": "Đào Dương Công Toại",
+  "DiaChi": "Trà Vinh",
+  "SDT": "0847577558",
+  "NgaySinh": "11-08-1999",
+  "GioiTinh": "Nam"
+},
+{
+  "_id": {
+    "$oid": "652ff4e444fc96354285da4d"
+  },
+  "TenKhachHang": "Bùi Nguyễn Gia Lạc",
+  "DiaChi": "Trà Vinh",
+  "SDT": "0825471111",
+  "NgaySinh": "26-10-2002",
+  "GioiTinh": "Nam"
+},
+{
+  "_id": {
+    "$oid": "652ff52344fc96354285da77"
+  },
+  "TenKhachHang": "Lê Thị Yến Nhi",
+  "DiaChi": "Tiền Giang",
+  "SDT": "0774878333",
+  "NgaySinh": "04-05-2002",
+  "GioiTinh": "Nữ"
 }]

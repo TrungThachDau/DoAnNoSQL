@@ -2,17 +2,35 @@
   "_id": {
     "$oid": "6529eb908c28ca4f57c91daf"
   },
-  "TaiKhoan": "admin",
+  "TaiKhoan": "nv01",
   "MatKhau": "123",
-  "HoTen": "Người quản trị 1",
+  "HoTen": "Đỗ Thị Ngọc Tuyền",
   "Quyen": 1
 },
 {
   "_id": {
     "$oid": "6529eba68c28ca4f57c91db0"
   },
-  "TaiKhoan": "admin2",
+  "TaiKhoan": "admin",
   "MatKhau": "123",
-  "HoTen": "Người quản trị 2",
+  "HoTen": "Nguyễn Quang Trung",
   "Quyen": 2
+},
+{
+  "_id": {
+    "$oid": "652ffe64e9cf0a388c2e0b68"
+  },
+  "TaiKhoan": "nv02",
+  "MatKhau": "123",
+  "HoTen": "Lưu Đức Thắng",
+  "Quyen": 1
+},
+{
+  "_id": {
+    "$oid": "652ffe94e9cf0a388c2e0b6a"
+  },
+  "TaiKhoan": "nv03",
+  "MatKhau": "123",
+  "HoTen": "Nguyễn Thị Ngọc Sương",
+  "Quyen": 1
 }]
