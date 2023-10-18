@@ -48,21 +48,27 @@ namespace QLBaoHanh
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string tenKH = txtTenKH.Text;
-            string diaChi = cbbTinh.Text;//"Quận 1, Hồ Chí Minh
-            string sdt = txtSDT.Text;
-            string ngsinh = dtpngsinh.Value.ToString(format: "dd-MM-yyyy");
-            string phai = cbbGioiTinh.Text;
-            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
-            mongoDBHelper.InsertOneDocument<KhachHang>("kh", new KhachHang
+            DialogResult r = MessageBox.Show("Bạn có chắc muốn thêm mới khách hàng '" + txtTenKH.Text + "' không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
-                TenKH = tenKH,
-                DiaChi = diaChi,
-                DienThoai = sdt,
-                Phai = phai,
-                NgaySinh = ngsinh
-            });
-            LoadKhachHang();
+                string tenKH = txtTenKH.Text;
+                string diaChi = cbbTinh.Text;//"Quận 1, Hồ Chí Minh
+                string sdt = txtSDT.Text;
+                string ngsinh = dtpngsinh.Value.ToString(format: "dd-MM-yyyy");
+                string phai = cbbGioiTinh.Text;
+                XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
+                mongoDBHelper.InsertOneDocument<KhachHang>("kh", new KhachHang
+                {
+                    TenKH = tenKH,
+                    DiaChi = diaChi,
+                    DienThoai = sdt,
+                    Phai = phai,
+                    NgaySinh = ngsinh
+                });
+                LoadKhachHang();
+                MessageBox.Show("Thêm thành công");
+
+            }
         }
 
         private void FormKhachHang_Load(object sender, EventArgs e)
@@ -80,29 +86,40 @@ namespace QLBaoHanh
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            string tenkh = txtTenKH.Text;
-            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
-            mongoDBHelper.DeleteOneDocument<KhachHang>("kh", "TenKhachHang", tenkh);
-            LoadKhachHang();
+            DialogResult r = MessageBox.Show("Bạn có chắc muốn xóa khách hàng '" + txtTenKH.Text + "' không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+
+                string tenkh = txtTenKH.Text;
+                XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
+                mongoDBHelper.DeleteOneDocument<KhachHang>("kh", "TenKhachHang", tenkh);
+                LoadKhachHang();
+                MessageBox.Show("Xóa thành công");
+            }
         }
 
         private void btnCapnhat_Click(object sender, EventArgs e)
         {
-            string tenKH = txtTenKH.Text;
-            string diaChi = cbbTinh.Text;//"Quận 1, Hồ Chí Minh
-            string sdt = txtSDT.Text;
-            string phai = cbbGioiTinh.Text;
-            string ngsinh = dtpngsinh.Value.ToString(format: "dd-MM-yyyy");
-            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
-            mongoDBHelper.UpdateOneDocument<KhachHang>("kh", "TenKhachHang", tenKH, new KhachHang
+            DialogResult r = MessageBox.Show("Bạn có chắc muốn sửa thông tin khách hàng '" + txtTenKH.Text + "' không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
-                TenKH = tenKH,
-                DiaChi = diaChi,
-                DienThoai = sdt,
-                Phai = phai,
-                NgaySinh = ngsinh
-            });
-            LoadKhachHang();
+                string tenKH = txtTenKH.Text;
+                string diaChi = cbbTinh.Text;//"Quận 1, Hồ Chí Minh
+                string sdt = txtSDT.Text;
+                string phai = cbbGioiTinh.Text;
+                string ngsinh = dtpngsinh.Value.ToString(format: "dd-MM-yyyy");
+                XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
+                mongoDBHelper.UpdateOneDocument<KhachHang>("kh", "TenKhachHang", tenKH, new KhachHang
+                {
+                    TenKH = tenKH,
+                    DiaChi = diaChi,
+                    DienThoai = sdt,
+                    Phai = phai,
+                    NgaySinh = ngsinh
+                });
+                LoadKhachHang();
+                MessageBox.Show("Sửa thành công");
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

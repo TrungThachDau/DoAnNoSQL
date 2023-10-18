@@ -71,31 +71,34 @@ namespace QLBaoHanh
             string ngayKichHoat = txtNgayKichHoat.Text;
             string moTaLoi = txtMoTaLoi.Text;
             string tinhTrang = cbbTinhTrang.Text;
-
-            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
-            mongoDBHelper.UpdateOneDocumentById<PhieuBaoHanh>("bh", maBH, new PhieuBaoHanh
+            DialogResult r = MessageBox.Show("Bạn có chắc muốn sửa thông tin phiếu bảo hành '" +maBH + "' không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
-                Id = ObjectId.Parse(maBH),
-                NgayYCBaoHanh = ngayYC,
-                KhachHang = new KhachHang
+                XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
+                mongoDBHelper.UpdateOneDocumentById<PhieuBaoHanh>("bh", maBH, new PhieuBaoHanh
                 {
-                    TenKH = tenKH,
-                    DiaChi = diaChi,
-                    DienThoai = sdt
-                },
-                SanPham = new SanPham
-                {
-                    TenSP = sanPham,
-                    ImeiSP = imei,
-                    NgayKichHoatBaoHanh = ngayKichHoat
-                },
-                MoTaLoi = moTaLoi,
-                TinhTrangXuLy = tinhTrang,
-                NgayCapNhat = DateTime.Now.ToString("dd-MM-yyyy")
+                    Id = ObjectId.Parse(maBH),
+                    NgayYCBaoHanh = ngayYC,
+                    KhachHang = new KhachHang
+                    {
+                        TenKH = tenKH,
+                        DiaChi = diaChi,
+                        DienThoai = sdt
+                    },
+                    SanPham = new SanPham
+                    {
+                        TenSP = sanPham,
+                        ImeiSP = imei,
+                        NgayKichHoatBaoHanh = ngayKichHoat
+                    },
+                    MoTaLoi = moTaLoi,
+                    TinhTrangXuLy = tinhTrang,
+                    NgayCapNhat = DateTime.Now.ToString("dd-MM-yyyy")
 
-            });
-            LoadData();
-            MessageBox.Show("Cập nhật thành công");
+                });
+                LoadData();
+                MessageBox.Show("Cập nhật thành công");
+            }    
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

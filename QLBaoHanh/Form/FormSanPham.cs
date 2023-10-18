@@ -54,28 +54,38 @@ namespace QLBaoHanh
             string tskt = txtTSKT.Text;
             string nsx = txtNSX.Text;
             string ngayKichHoat = dtpNgayKichHoat.Value.ToString("dd-MM-yyyy");
-
-            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
-            mongoDBHelper.InsertOneDocument<SanPham>("sp", new SanPham
+            DialogResult r = MessageBox.Show("Bạn có chắc muốn thêm sản phẩm '" + txtTenSp.Text + "' không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
-                MaSP = maSP,
-                TenSP = tenSP,
-                Gia = gia,
-                ImeiSP = imei,
-                ThongSoKyThuat = tskt,
-                NhaSanXuat = nsx,
-                NgayKichHoatBaoHanh = ngayKichHoat
-            });
 
-            LoadSanPham();
+                XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
+                mongoDBHelper.InsertOneDocument<SanPham>("sp", new SanPham
+                {
+                    MaSP = maSP,
+                    TenSP = tenSP,
+                    Gia = gia,
+                    ImeiSP = imei,
+                    ThongSoKyThuat = tskt,
+                    NhaSanXuat = nsx,
+                    NgayKichHoatBaoHanh = ngayKichHoat
+                });
+
+                LoadSanPham();
+                MessageBox.Show("Thêm thành công");
+            }    
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            string maSP = txtMaSp.Text;
-            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
-            mongoDBHelper.DeleteOneDocument<SanPham>("sp", "MaSp", maSP);
-            LoadSanPham();
+            DialogResult r = MessageBox.Show("Bạn có chắc muốn xóa sản phẩm '" + txtTenSp.Text + "' không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+                string maSP = txtMaSp.Text;
+                XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
+                mongoDBHelper.DeleteOneDocument<SanPham>("sp", "MaSp", maSP);
+                LoadSanPham();
+                MessageBox.Show("Xóa thành công");
+            }    
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -85,27 +95,31 @@ namespace QLBaoHanh
                 MessageBox.Show("Vui lòng chọn sản phẩm cần sửa");
                 return;
             }
-
-            string maSP = txtMaSp.Text;
-            string tenSP = txtTenSp.Text;
-            int gia = int.Parse(txtGia.Text);
-            string imei = txtImei.Text;
-            string tskt = txtTSKT.Text;
-            string nsx = txtNSX.Text;
-            string ngayKichHoat = dtpNgayKichHoat.Value.ToString("dd-MM-yyyy");
-
-            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
-            mongoDBHelper.UpdateOneDocument<SanPham>("sp", "MaSp", maSP, new SanPham
+            DialogResult r = MessageBox.Show("Bạn có chắc muốn sửa thông tin sản phẩm '" + txtTenSp.Text + "' không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
-                MaSP = maSP,
-                TenSP = tenSP,
-                Gia = gia,
-                ImeiSP = imei,
-                ThongSoKyThuat = tskt,
-                NhaSanXuat = nsx,
-                NgayKichHoatBaoHanh = ngayKichHoat
-            });
-            LoadSanPham();
+                string maSP = txtMaSp.Text;
+                string tenSP = txtTenSp.Text;
+                int gia = int.Parse(txtGia.Text);
+                string imei = txtImei.Text;
+                string tskt = txtTSKT.Text;
+                string nsx = txtNSX.Text;
+                string ngayKichHoat = dtpNgayKichHoat.Value.ToString("dd-MM-yyyy");
+
+                XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
+                mongoDBHelper.UpdateOneDocument<SanPham>("sp", "MaSp", maSP, new SanPham
+                {
+                    MaSP = maSP,
+                    TenSP = tenSP,
+                    Gia = gia,
+                    ImeiSP = imei,
+                    ThongSoKyThuat = tskt,
+                    NhaSanXuat = nsx,
+                    NgayKichHoatBaoHanh = ngayKichHoat
+                });
+                LoadSanPham();
+                MessageBox.Show("Sửa thành công");
+            }   
         }
 
         private void btn_Huy_Click(object sender, EventArgs e)

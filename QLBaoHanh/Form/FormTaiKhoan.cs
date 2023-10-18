@@ -64,30 +64,39 @@ namespace QLBaoHanh
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                 return;
             }
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-            string ten = txtTen.Text;
-            double quyen = double.Parse(comboBox1.Text);
-            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
-            mongoDBHelper.InsertOneDocument<TaiKhoan>("tk", new TaiKhoan
+            DialogResult r = MessageBox.Show("Bạn có chắc muốn thêm thông tin tài khoản của '" + txtTen.Text + "' không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
-                Username = username,
-                Password = password,
-                TenNV = ten,
-                Quyen = quyen
-            });
-            LoadTaiKhoan();
-            MessageBox.Show("Thêm thành công");
+                string username = txtUsername.Text;
+                string password = txtPassword.Text;
+                string ten = txtTen.Text;
+                double quyen = double.Parse(comboBox1.Text);
+                XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
+                mongoDBHelper.InsertOneDocument<TaiKhoan>("tk", new TaiKhoan
+                {
+                    Username = username,
+                    Password = password,
+                    TenNV = ten,
+                    Quyen = quyen
+                });
+                LoadTaiKhoan();
+                MessageBox.Show("Thêm thành công");
+            }
+               
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
-            string username = txtUsername.Text;
-            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
-            mongoDBHelper.DeleteOneDocument<TaiKhoan>("tk", "TaiKhoan", username);
-            LoadTaiKhoan();
-            MessageBox.Show("Xóa thành công");
+            DialogResult r = MessageBox.Show("Bạn có chắc muốn xóa thông tin tài khoản của '" + txtTen.Text + "' không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+                string username = txtUsername.Text;
+                XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
+                mongoDBHelper.DeleteOneDocument<TaiKhoan>("tk", "TaiKhoan", username);
+                LoadTaiKhoan();
+                MessageBox.Show("Xóa thành công");
+            }
+               
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -97,20 +106,25 @@ namespace QLBaoHanh
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                 return;
             }
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-            string ten = txtTen.Text;
-            double quyen = double.Parse(comboBox1.SelectedValue.ToString());
-            XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
-            mongoDBHelper.UpdateOneDocument<TaiKhoan>("tk", "TaiKhoan", username, new TaiKhoan
+            DialogResult r = MessageBox.Show("Bạn có chắc muốn thêm thông tin tài khoản của '" + txtTen.Text + "' không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
-                Username = username,
-                Password = password,
-                TenNV = ten,
-                Quyen = quyen
-            });
-            LoadTaiKhoan();
-            MessageBox.Show("Sửa thành công");
+
+                string username = txtUsername.Text;
+                string password = txtPassword.Text;
+                string ten = txtTen.Text;
+                double quyen = double.Parse(comboBox1.SelectedValue.ToString());
+                XuLy.XuLyTruyVan mongoDBHelper = new XuLy.XuLyTruyVan();
+                mongoDBHelper.UpdateOneDocument<TaiKhoan>("tk", "TaiKhoan", username, new TaiKhoan
+                {
+                    Username = username,
+                    Password = password,
+                    TenNV = ten,
+                    Quyen = quyen
+                });
+                LoadTaiKhoan();
+                MessageBox.Show("Sửa thành công");
+            }
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
