@@ -272,121 +272,144 @@ public class XuLyTruyVan
             }
             return resultDataTable;
         }
-        public DataTable GetWarrantyStatisticsByYear(int year)  //
-		{
-			// Lấy danh sách phiếu bảo hành dựa trên năm
-			var warrantyCollection = db.GetCollection<PhieuBaoHanh>("bh");
-			var warrantyFilter = Builders<PhieuBaoHanh>.Filter.Empty; // Lọc tất cả phiếu bảo hành
-			var warrantyDocuments = warrantyCollection.Find(warrantyFilter).ToList();
+    public DataTable GetWarrantyStatisticsByYear(int year)
+    {
+        DataTable resultDataTable = new DataTable();
+        resultDataTable.Columns.Add("MaSp");
+        resultDataTable.Columns.Add("TenSanPham");
+        resultDataTable.Columns.Add("Gia");
+        resultDataTable.Columns.Add("NgayKichHoatBH");
+        resultDataTable.Columns.Add("TenKhachHang");
+        resultDataTable.Columns.Add("DiachiKhachHang");
+        resultDataTable.Columns.Add("PhaiKhachHang");
+        resultDataTable.Columns.Add("SDTKhachHang");
+        resultDataTable.Columns.Add("NgayYeuCauBH");
+        var list = GetAllDocuments<PhieuBaoHanh>("bh");
+        foreach (var item in list)
+        {
+            var masp = item.SanPham.MaSP;
+            if (masp != null)
+            {
+                var row = resultDataTable.NewRow();
+                row["Masp"] = masp;
+                row["TenSanPham"] = item.SanPham.TenSP;
+                row["Gia"] = item.SanPham.Gia;
+                row["NgayKichHoatBH"] = item.SanPham.NgayKichHoatBaoHanh;
+                row["TenKhachHang"] = item.KhachHang.TenKH;
+                row["DiachiKhachHang"] = item.KhachHang.DiaChi;
+                row["PhaiKhachHang"] = item.KhachHang.Phai;
+                row["SDTKhachHang"] = item.KhachHang.DienThoai;
+                row["NgayYeuCauBH"] = item.NgayYCBaoHanh;
+                string NgayYC = item.NgayYCBaoHanh;
+                DateTime ngayYeuCauBH = DateTime.Parse(NgayYC);
+                int yearFromNgayYeuCauBH = ngayYeuCauBH.Year;
+                if (yearFromNgayYeuCauBH == year)
+                {
+                    resultDataTable.Rows.Add(row);
+                }
+            }
+        }
+        return resultDataTable;
+    }
+  //      public DataTable GetWarrantyStatisticsByYear(int year)  //
+		//{
+		//	// Lấy danh sách phiếu bảo hành dựa trên năm
+		//	var warrantyCollection = db.GetCollection<PhieuBaoHanh>("bh");
+		//	var warrantyFilter = Builders<PhieuBaoHanh>.Filter.Empty; // Lọc tất cả phiếu bảo hành
+		//	var warrantyDocuments = warrantyCollection.Find(warrantyFilter).ToList();
 
-			// Tạo DataTable để lưu kết quả thống kê
-			DataTable resultDataTable = new DataTable();
-			resultDataTable.Columns.Add("Masp");
-			resultDataTable.Columns.Add("TenSanPham");
-			resultDataTable.Columns.Add("Gia");
-			resultDataTable.Columns.Add("NgayKichHoatBH");
-			resultDataTable.Columns.Add("TenKhachHang");
-			resultDataTable.Columns.Add("DiachiKhachHang");
-			resultDataTable.Columns.Add("PhaiKhachHang");
-			resultDataTable.Columns.Add("SDTKhachHang");
-			resultDataTable.Columns.Add("NgayYeuCauBH");
+		//	// Tạo DataTable để lưu kết quả thống kê
+		//	DataTable resultDataTable = new DataTable();
+		//	resultDataTable.Columns.Add("Masp");
+		//	resultDataTable.Columns.Add("TenSanPham");
+		//	resultDataTable.Columns.Add("Gia");
+		//	resultDataTable.Columns.Add("NgayKichHoatBH");
+		//	resultDataTable.Columns.Add("TenKhachHang");
+		//	resultDataTable.Columns.Add("DiachiKhachHang");
+		//	resultDataTable.Columns.Add("PhaiKhachHang");
+		//	resultDataTable.Columns.Add("SDTKhachHang");
+		//	resultDataTable.Columns.Add("NgayYeuCauBH");
 
-			// Kết hợp thông tin từ các bảng
-			foreach (var warrantyDoc in warrantyDocuments)
-			{
-				var masp = warrantyDoc.SanPham.MaSP;
+		//	// Kết hợp thông tin từ các bảng
+		//	foreach (var warrantyDoc in warrantyDocuments)
+		//	{
+		//		var masp = warrantyDoc.SanPham.MaSP;
 
-				// Lấy thông tin sản phẩm từ cơ sở dữ liệu sản phẩm
-				var productCollection = db.GetCollection<SanPham>("sp");
-				var productFilter = Builders<SanPham>.Filter.Eq("MaSp", masp);
-				var productDoc = productCollection.Find(productFilter).FirstOrDefault();
+		//		// Lấy thông tin sản phẩm từ cơ sở dữ liệu sản phẩm
+		//		var productCollection = db.GetCollection<SanPham>("sp");
+		//		var productFilter = Builders<SanPham>.Filter.Eq("MaSp", masp);
+		//		var productDoc = productCollection.Find(productFilter).FirstOrDefault();
 
-				if (productDoc != null)
-				{
-					// Chuyển đổi chuỗi ngày thành kiểu DateTime
-					DateTime ngayYeuCauBH = DateTime.Parse(warrantyDoc.NgayYCBaoHanh);
+		//		if (productDoc != null)
+		//		{
+		//			// Chuyển đổi chuỗi ngày thành kiểu DateTime
+		//			DateTime ngayYeuCauBH = DateTime.Parse(warrantyDoc.NgayYCBaoHanh);
 
-					// Lấy năm từ kiểu DateTime
-					int yearFromNgayYeuCauBH = ngayYeuCauBH.Year;
+		//			// Lấy năm từ kiểu DateTime
+		//			int yearFromNgayYeuCauBH = ngayYeuCauBH.Year;
 
-					if (yearFromNgayYeuCauBH == year)
-					{
-						var row = resultDataTable.NewRow();
-						row["Masp"] = masp;
-						row["TenSanPham"] = productDoc.TenSP;
-						row["Gia"] = productDoc.Gia;
-						row["NgayKichHoatBH"] = productDoc.NgayKichHoatBaoHanh;
-						row["TenKhachHang"] = warrantyDoc.KhachHang.TenKH;
-						row["DiachiKhachHang"] = warrantyDoc.KhachHang.DiaChi;
-						row["PhaiKhachHang"] = warrantyDoc.KhachHang.Phai;
-						row["SDTKhachHang"] = warrantyDoc.KhachHang.DienThoai;
-						row["NgayYeuCauBH"] = warrantyDoc.NgayYCBaoHanh;
+		//			if (yearFromNgayYeuCauBH == year)
+		//			{
+		//				var row = resultDataTable.NewRow();
+		//				row["Masp"] = masp;
+		//				row["TenSanPham"] = productDoc.TenSP;
+		//				row["Gia"] = productDoc.Gia;
+		//				row["NgayKichHoatBH"] = productDoc.NgayKichHoatBaoHanh;
+		//				row["TenKhachHang"] = warrantyDoc.KhachHang.TenKH;
+		//				row["DiachiKhachHang"] = warrantyDoc.KhachHang.DiaChi;
+		//				row["PhaiKhachHang"] = warrantyDoc.KhachHang.Phai;
+		//				row["SDTKhachHang"] = warrantyDoc.KhachHang.DienThoai;
+		//				row["NgayYeuCauBH"] = warrantyDoc.NgayYCBaoHanh;
 
-						resultDataTable.Rows.Add(row);
-					}
-				}
-			}
+		//				resultDataTable.Rows.Add(row);
+		//			}
+		//		}
+		//	}
 
-			return resultDataTable;
-		}
+		//	return resultDataTable;
+		//}
 
 		public DataTable GetWarrantyStatisticsByMonth(int month)  //
 		{
-			// Lấy danh sách phiếu bảo hành dựa trên tháng
-			var warrantyCollection = db.GetCollection<PhieuBaoHanh>("bh");
-			var warrantyFilter = Builders<PhieuBaoHanh>.Filter.Empty; // Lọc tất cả phiếu bảo hành
-			var warrantyDocuments = warrantyCollection.Find(warrantyFilter).ToList();
+        // Lấy danh sách phiếu bảo hành dựa trên tháng
 
-			// Tạo DataTable để lưu kết quả thống kê
-			DataTable resultDataTable = new DataTable();
-			resultDataTable.Columns.Add("MaSp");
-			resultDataTable.Columns.Add("TenSanPham");
-			resultDataTable.Columns.Add("Gia");
-			resultDataTable.Columns.Add("NgayKichHoatBH");
-			resultDataTable.Columns.Add("TenKhachHang");
-			resultDataTable.Columns.Add("DiachiKhachHang");
-			resultDataTable.Columns.Add("PhaiKhachHang");
-			resultDataTable.Columns.Add("SDTKhachHang");
-			resultDataTable.Columns.Add("NgayYeuCauBH");
-
-			// Kết hợp thông tin từ các bảng
-			foreach (var warrantyDoc in warrantyDocuments)
-			{
-				var masp = warrantyDoc.SanPham.MaSP;
-
-				// Lấy thông tin sản phẩm từ cơ sở dữ liệu sản phẩm
-				var productCollection = db.GetCollection<SanPham>("sp");
-				var productFilter = Builders<SanPham>.Filter.Eq("MaSp", masp);
-				var productDoc = productCollection.Find(productFilter).FirstOrDefault();
-
-				if (productDoc != null)
-				{
-					// Chuyển đổi chuỗi ngày thành kiểu DateTime
-					DateTime ngayYeuCauBH = DateTime.Parse(warrantyDoc.NgayYCBaoHanh);
-
-					// Lấy tháng từ kiểu DateTime
-					int monthFromNgayYeuCauBH = ngayYeuCauBH.Month;
-
-					if (monthFromNgayYeuCauBH == month)
-					{
-						var row = resultDataTable.NewRow();
-						row["Masp"] = masp;
-						row["TenSanPham"] = productDoc.TenSP;
-						row["Gia"] = productDoc.Gia;
-						row["NgayKichHoatBH"] = productDoc.NgayKichHoatBaoHanh;
-						row["TenKhachHang"] = warrantyDoc.KhachHang.TenKH;
-						row["DiachiKhachHang"] = warrantyDoc.KhachHang.DiaChi;
-						row["PhaiKhachHang"] = warrantyDoc.KhachHang.Phai;
-						row["SDTKhachHang"] = warrantyDoc.KhachHang.DienThoai;
-						row["NgayYeuCauBH"] = warrantyDoc.NgayYCBaoHanh;
-
-						resultDataTable.Rows.Add(row);
-					}
-				}
-			}
-
-			return resultDataTable;
-		}
+        DataTable resultDataTable = new DataTable();
+        resultDataTable.Columns.Add("MaSp");
+        resultDataTable.Columns.Add("TenSanPham");
+        resultDataTable.Columns.Add("Gia");
+        resultDataTable.Columns.Add("NgayKichHoatBH");
+        resultDataTable.Columns.Add("TenKhachHang");
+        resultDataTable.Columns.Add("DiachiKhachHang");
+        resultDataTable.Columns.Add("PhaiKhachHang");
+        resultDataTable.Columns.Add("SDTKhachHang");
+        resultDataTable.Columns.Add("NgayYeuCauBH");
+        var list = GetAllDocuments<PhieuBaoHanh>("bh");
+        foreach (var item in list)
+        {
+            var masp = item.SanPham.MaSP;
+            if (masp != null)
+            {
+                var row = resultDataTable.NewRow();
+                row["Masp"] = masp;
+                row["TenSanPham"] = item.SanPham.TenSP;
+                row["Gia"] = item.SanPham.Gia;
+                row["NgayKichHoatBH"] = item.SanPham.NgayKichHoatBaoHanh;
+                row["TenKhachHang"] = item.KhachHang.TenKH;
+                row["DiachiKhachHang"] = item.KhachHang.DiaChi;
+                row["PhaiKhachHang"] = item.KhachHang.Phai;
+                row["SDTKhachHang"] = item.KhachHang.DienThoai;
+                row["NgayYeuCauBH"] = item.NgayYCBaoHanh;
+                string NgayYC = item.NgayYCBaoHanh;
+                DateTime ngayYeuCauBH = DateTime.Parse(NgayYC);
+                int yearFromNgayYeuCauBH = ngayYeuCauBH.Month;
+                if (yearFromNgayYeuCauBH == month)
+                {
+                    resultDataTable.Rows.Add(row);
+                }
+            }
+        }
+        return resultDataTable;
+    }
 
 		public List<BsonDocument> GetAllDocuments<BsonDocument>(string collectionName)
     {
