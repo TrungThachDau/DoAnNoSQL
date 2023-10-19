@@ -32,17 +32,19 @@ namespace QLBaoHanh
             if (xuLyDangNhap.KiemTraDangNhap(username, password) == 1)
             {
                 MessageBox.Show("Đăng nhập thành công");
-                FormTrangChu f = new FormTrangChu();
+				FormTrangChu f = new FormTrangChu();
                 f.menuStrip1.Items["menuThongKe"].Visible = false;
                 f.menuStrip1.Items["tàiKToolStripMenuItem"].Visible=false;
                 f.Show();
+                this.Hide();
             }
             else if (xuLyDangNhap.KiemTraDangNhap(username, password) == 2)
             {
                 MessageBox.Show("Đăng nhập thành công");
-                FormTrangChu f = new FormTrangChu();
+				FormTrangChu f = new FormTrangChu();
                 f.Show();
-            }
+                this.Hide();
+			}
             else
             {
                 MessageBox.Show("Đăng nhập thất bại");
@@ -62,6 +64,7 @@ namespace QLBaoHanh
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+            return;
         }
     }
 }

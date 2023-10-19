@@ -169,3 +169,45 @@ D:\Document\nam 4\Semester1\git\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\ref
 D:\Document\nam 4\Semester1\git\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.pdb
 D:\Document\nam 4\Semester1\git\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.genruntimeconfig.cache
 D:\Document\nam 4\Semester1\git\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\ref\QLBaoHanh.dll
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\QLBaoHanh.exe
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\mongocrypt.dll
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\QLBaoHanh.dll.config
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\QLBaoHanh.deps.json
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\QLBaoHanh.runtimeconfig.json
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\QLBaoHanh.dll
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\QLBaoHanh.pdb
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\AWSSDK.Core.dll
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\AWSSDK.SecurityToken.dll
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\DnsClient.dll
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\MongoDB.Bson.dll
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\MongoDB.Driver.dll
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\MongoDB.Driver.Core.dll
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\MongoDB.Libmongocrypt.dll
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\SharpCompress.dll
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\Snappier.dll
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\System.ComponentModel.Composition.dll
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\ZstdSharp.dll
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\runtimes\linux\native\libmongocrypt.so
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\runtimes\osx\native\libmongocrypt.dylib
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\bin\Debug\net7.0-windows\runtimes\win\native\mongocrypt.dll
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.csproj.AssemblyReference.cache
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.FormDangNhap.resources
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.FormKhachHang.resources
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.FormPhieuBaoHanh.resources
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.FormSanPham.resources
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.FormTaiKhoan.resources
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.FormThemPhieu.resources
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.FormThongKe.resources
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.FormTrangChu.resources
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.Properties.Resources.resources
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.csproj.GenerateResource.cache
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.GeneratedMSBuildEditorConfig.editorconfig
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.csproj.CoreCompileInputs.cache
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.csproj.CopyComplete
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.dll
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\refint\QLBaoHanh.dll
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.pdb
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\QLBaoHanh.genruntimeconfig.cache
+D:\Hoc\nosql\doan\pj\DoAnNoSQL\QLBaoHanh\obj\Debug\net7.0-windows\ref\QLBaoHanh.dll
